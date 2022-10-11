@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rancho&effect=anaglyph"
+    />
+    <!-- Beta Effect for the google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- moving script -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/svg-path-commander/dist/svg-path-commander.min.js"></script> -->
+    
+  </head>
+
+  <style>
+    body {
+      font-family: "Nunito", sans-serif;
+      /* font-size: 18px; */
+      margin: 0;
+      color: white;
+      background: black;
+      overflow-x: hidden; /*doesnt allow the frame to move x axis */
+    }
+
+    section {
+      position: relative;
+      display: flex;
+      flex-direction: column; /*using flexbox*/
+      align-items: center;
+      min-height: 400px;
+      padding: 100px 20vw;
+    }
+
+    .blue {
+      background: blue;
+    }
+
+    .red {
+      background: red;
+    }
+
+    .green {
+      background: green;
+    }
+
+    .pink {
+      background: pink;
+    }
+
+    .curve {
+      position: absolute;
+      height: 225px;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .curve::before {
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 100% 50%;
+      width: 55%;
+      height: 100%;
+      background-color: black;
+      transform: translate(85%, 60%);
+    }
+
+    .curve::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 100% 50%;
+      width: 55%;
+      height: 100%;
+      background-color: blue;
+      transform: translate(-4%, 40%);
+      z-index: -1; /*makes sure the darker circle sits on top of the lighter one */
+    }
+
+    /* bubble */
+    .bubble::after {
+      content: "";
+      border-top-left-radius: 50% 100%;
+      border-top-right-radius: 50% 100%;
+      position: absolute;
+      bottom: 0;
+      height: 85%;
+      width: 120%;
+      background-color: red;
+      z-index: -1;
+    }
+
+    .custom-shape-divider-top-1665185677 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .custom-shape-divider-top-1665185677 svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 204px;
+      transform: rotateY(180deg);
+    }
+
+    .custom-shape-divider-top-1665185677 .shape-fill {
+      fill: white;
+    }
+
+    /* haikiei web tool */
+
+    .dot {
+      aspect-ratio: 960/600;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .layer1 {
+      background-image: url("circle-scatter-haikei.svg");
+    }
+
+    /* moving js*/
+    .spacer {
+      aspect-ratio: 960/600;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .layer2 {
+      background-image: url("layered-peaks-haikei.svg");
+    }
+
+    .flip {
+      transform: rotate(180deg);
+    }
+
+    /*.green {
+      position: absolute;
+      transform: translateY(-20%);
+    } */
+  </style>
+
+  <body>
+    <section class="custom-shape-divider-top-1665185677">
+      <h1>Nice curves</h1>
+      <p>
+        Non, illum? Atque a quas sapiente facere laudantium id temporibus
+        blanditiis, tenetur, nostrum sequi aspernatur ipsam ipsum in obcaecati,
+        doloribus maiores eligendi maxime sit fuga illum? Tempore in deleniti
+        architecto?
+      </p>
+
+      <div class="custom-shape-divider-top-1665185677">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            opacity=".25"
+            class="shape-fill"
+          ></path>
+          <path
+            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+            opacity=".5"
+            class="shape-fill"
+          ></path>
+          <path
+            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <section class="blue">
+      <div class="font-effect-anaglyph"><h1>Nice curves</h1></div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci,
+        harum laudantium assumenda ex ipsum labore enim voluptatibus eius optio
+        quo magnam, quasi commodi architecto reiciendis blanditiis aperiam
+        accusantium quisquam quibusdam?
+      </p>
+      <div class="curve"></div>
+    </section>
+
+    <section>
+      <h1>Nice curves</h1>
+      <p>
+        Non, illum? Atque a quas sapiente facere laudantium id temporibus
+        blanditiis, tenetur, nostrum sequi aspernatur ipsam ipsum in obcaecati,
+        doloribus maiores eligendi maxime sit fuga illum? Tempore in deleniti
+        architecto?
+      </p>
+    </section>
+
+    <section class="bubble">
+      <h1>Nice curves</h1>
+      <p>
+        Similique dicta sit aspernatur et deserunt culpa, dolorem corrupti,
+        facilis laborum accusamus ipsa unde, voluptas error? Reiciendis
+        inventore nemo repudiandae assumenda ratione explicabo harum, doloribus
+        et magni, eius, voluptatum ut.
+      </p>
+    </section>
+
+    <section class="red">
+      <h1>Nice curves</h1>
+      <p>
+        Ducimus soluta libero necessitatibus. Architecto, nisi a accusantium
+        nihil cupiditate omnis iste commodi repudiandae veritatis illo
+        voluptatem dolores dignissimos deleniti eveniet nobis, vitae, dolore
+        distinctio nemo. Rem nostrum magni ea?
+      </p>
+    </section>
+
+    <section>
+      <h1>Nice curves</h1>
+      <p>
+        Optio quia animi consequuntur pariatur. Expedita facilis tenetur quos
+        commodi odio dolore quisquam pariatur illum esse neque. Cum delectus
+        consectetur facilis commodi exercitationem. Recusandae voluptate error
+        numquam voluptatum, modi dicta.
+      </p>
+    </section>
+    <div class="dot layer1"></div>
+    <section>
+      <h1>Nice curves</h1>
+      <p>
+        Soluta tempora rem pariatur repudiandae porro architecto magnam quisquam
+        laudantium. Laudantium, veritatis dolorum eum sequi reprehenderit
+        aliquam fugiat tempora harum nihil reiciendis sed laboriosam pariatur
+        vitae eius iste! Tempora, consectetur!
+      </p>
+    </section>
+
+    <div class="spacer layer2 flip"></div>
+    <section class="green">
+      <h1>Nice curves</h1>
+      <p>
+        Ducimus soluta libero necessitatibus. Architecto, nisi a accusantium
+        nihil cupiditate omnis iste commodi repudiandae veritatis illo
+        voluptatem dolores dignissimos deleniti eveniet nobis, vitae, dolore
+        distinctio nemo. Rem nostrum magni ea?
+      </p>
+    </section>
+
+    <!-- Either JS or CDN doesnt work -->
+    <!-- <section class="green">
+      <h1>Nice curves</h1>
+      <p>
+        Molestias mollitia alias voluptatem veniam incidunt, sint qui doloremque
+        cum a labore iure unde rem sequi officiis doloribus. Id vel earum
+        laboriosam quo vitae recusandae accusamus nobis obcaecati mollitia
+        sequi.
+      </p>
+
+      <svg
+        id="visual"
+        viewBox="0 0 900 600"
+        width="900"
+        height="600"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <defs>
+          <linearGradient id="grad1_0" x1="33.3%" y1="0%" x2="100%" y2="100%">
+            <stop offset="20%" stop-color="#000000" stop-opacity="1"></stop>
+            <stop offset="80%" stop-color="#000000" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <defs>
+          <linearGradient id="grad2_0" x1="0%" y1="0%" x2="66.7%" y2="100%">
+            <stop offset="20%" stop-color="#000000" stop-opacity="1"></stop>
+            <stop offset="80%" stop-color="#000000" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g transform="translate(900, 0)">
+          <path id="wave1"
+            d="M0 486.7C-52.9 453.7 -105.8 420.7 -166.5 401.9C-227.1 383.1 -295.4 378.5 -344.2 344.2C-392.9 309.8 -422 245.6 -442.5 183.3C-463 121 -474.9 60.5 -486.7 0L0 0Z"
+            fill="#715DF2"
+          ></path>
+        </g>
+         <g transform="translate(0, 600)" >
+          <path id="wave1"
+            d="M0 -486.7C56.1 -463.7 112.3 -440.6 174.5 -421.3C236.7 -402 305.1 -386.6 344.2 -344.2C383.3 -301.8 393.2 -232.5 412.1 -170.7C430.9 -108.8 458.8 -54.4 486.7 0L0 0Z"
+            fill="#715DF2"
+          ></path>
+        </g>
+        <g transform="translate(900, 0)" style="visibility: hidden;">
+          <path id="wave2"
+            d="M0 486.7C-28.8 405.6 -57.6 324.4 -130.9 316C-204.1 307.5 -321.9 371.7 -344.2 344.2C-366.5 316.7 -293.3 197.4 -301.2 124.8C-309 52.1 -397.9 26.1 -486.7 0L0 0Z"
+            fill="#fff"
+          ></path>
+        </g>
+        <g transform="translate(0, 600)" style="visibility: hidden;">
+          <path id="wave2"
+            d="M0 -486.7C61.7 -480.3 123.4 -473.9 186.3 -449.7C249.1 -425.5 313.1 -383.4 323.1 -323.1C333.2 -262.9 289.4 -184.3 307.7 -127.4C325.9 -70.5 406.3 -35.3 486.7 0L0 0Z"
+            fill="#715DF2"
+          ></path>
+        </g>
+      </svg>
+      <script>
+        const tween = KUTE.fromTo(
+          "#wave1",
+          { path: "#wave1" },
+          { path: "#wave2" },
+          { repeat: 999, duration: 30, yoyo: true }
+        );
+        tween.start()
+      </script>
+    </section> -->
+    <div class="spacer layer2"></div>
+  </body>
+</html>
+
