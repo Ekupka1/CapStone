@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="practice.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <nav class="navbar">
+        <!-- navbar section -->
+        <style>
+          @import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap");
+  
+          :root {
+            --clr-neon: #a861ff;
+            --clr-bg: #202020;
+            --clr-tdf: #ffffff;
+            --font-size: 3rem;
+          }
+  
+          /* Scrollbar */
+          ::-webkit-scrollbar {
+            background: #141414;
+            backdrop-filter: blur(10px);
+            width: 0px;
+            height: 0px;
+          } /* Made it no show */
+  
+          *,
+          *::after,
+          *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Jura", sans-serif;
+          }
+  
+          body {
+            padding: 0;
+            background: var(--clr-bg);
+            color: var(--clr-neon);
+          }
+  
+          /* Navbar Section */
+          .navbar {
+            background-color: #141414;
+            height: 95px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+          }
+  
+          .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            z-index: 1;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 50px;
+          }
+  
+          #navbar__logo {
+            background-color: var(--clr-tdf); /*can use root*/
+            text-shadow: 0 0 0.02em rgb(250, 240, 255), 0 0 0.1em var(--clr-neon);
+            /* background-image: linear-gradient(to top, #fff 0%, #a861ff 100%); */
+            letter-spacing: 5px;
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 2.5rem;
+          }
+  
+          /* Menu Section */
+          .navbar__menu {
+            display: flex;
+            flex: 0;
+            align-items: center;
+            list-style: none;
+            text-align: center;
+            margin: 0;
+          }
+  
+          /* Main class list */
+          .navbar__item {
+            height: 100px;
+            letter-spacing: 5px;
+            margin: 0.25em;
+          }
+  
+          .navbar__item:hover {
+            transform: scale(1.085);
+            transition: 0.3s ease-in;
+            cursor: pointer;
+            /* text-decoration-line: overline;
+            text-decoration-color: var(--clr-neon);   */
+          }
+  
+          /* Sub class list */
+          .navbar__links {
+            color: var(--clr-tdf);
+            /* text-shadow: 0 0 0.2em #fff7, 0 0 0.3em var(--clr-neon); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 0 1rem;
+            height: 100%;
+          }
+  
+          .navbar__btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem;
+            width: 100%;
+          }
+  
+          .navbar__links:hover {
+            text-shadow: 0 0 0.25em #fff7, 0 0 0.35em var(--clr-neon);
+            color: var(--clr-tdf); /*can use root*/
+            transition: all 0.1s ease;
+          }
+  
+        </style>
+        <div class="navbar__container">
+          <a href="#home" id="navbar__logo">&lt;/C4&gt;</a>
+          <!-- For the mobile versions drop down -->
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <!-- first child -->
+            <span class="bar"></span>
+            <!-- second child -->
+            <span class="bar"></span>
+            <!-- third child -->
+          </div>
+  
+          <ul class="navbar__menu">
+            <!-- actual navbar section -->
+            <li class="navbar__item">
+              <a href="index.html" class="navbar__links" id="home-page"><b>Home</b></a>
+            </li>
+            <li class="navbar__item">
+              <a href="blog.html" class="navbar__links" id="home-page"><b>Blog</b></a>
+            </li>
+            <li class="navbar__btn">
+              <a href="#contact" class="button" id="home-page" 
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <style>
+          /* Style for Neon Contact button */
+          /* Redo */
+          .button {
+            letter-spacing: 3px;
+            position: relative;
+            display: flex;
+            cursor: pointer;
+            border: var(--clr-neon) 0.125em solid;
+            border-radius: 0.25em;
+            text-shadow: 0 0 0.2em #fff7, 0 0 0.3em var(--clr-neon);
+            box-shadow: 0 0 0.5em var(--clr-neon), 0 0 0.5em var(--clr-neon);
+            margin: 0.25em;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 8px 20px;
+            height: 100%;
+            width: 100%;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            color: #f5fffa;
+          }
+  
+          .button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 4px;
+            background: var(--clr-neon);
+            box-shadow: 0 0 1em var(--clr-neon);
+            z-index: -1;
+            opacity: 0;
+            transition: all 0.1s ease;
+          }
+  
+          .button:hover::after {
+            opacity: 1;
+          }
+  
+          .button:hover,
+          .button:focus {
+            color: white;
+          }
+  
+          .button:hover::before {
+            opacity: 0.8;
+          }
+        </style>
+      </nav>
+</body>
+</html>

@@ -1,267 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/blog/">
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="blog.css" rel="stylesheet">
 </head>
 <body>
-
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap");
   
-        :root {
-          --clr-neon: #a861ff;
-          --clr-bg: #202020;
-          --clr-tdf: #f5fffa;
-          --font-size: 3rem;
-        }
-  
-        /* Scrollbar */
-   ::-webkit-scrollbar {
-    background: #141414;
-    backdrop-filter: blur(10px);
-    width: 0px;
-    height: 0px;
-  } /* Made it no show */
-  
-        *,
-        *::after,
-        *::before {
-          box-sizing: border-box;
-          margin: 0;
-    padding: 0;
-    font-family: "Jura", sans-serif;
-        }
-  
-        body {
-          
-          /* min-height: 100vh;
-          display: grid; */
-          background: var(--clr-bg);
-          color: var(--clr-neon);
-      
-        }
-  
-        /* Navbar Section */
-        .navbar {
-          background-color: #141414;
-          height: 95px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 1.3rem;
-          position: sticky;
-          top: 0;
-          z-index: 999;
-        }
-  
-        .navbar__container {
-          display: flex;
-          justify-content: space-between;
-          height: 80px;
-          z-index: 1;
-          width: 100%;
-          max-width: 1300px;
-          margin: 0 auto;
-          padding: 0 50px;
-        }
-  
-        #navbar__logo {
-          background-color: var(--clr-tdf); /*can use root*/
-          text-shadow: 0 0 0.02em rgb(250, 240, 255), 0 0 0.1em var(--clr-neon);
-          /* background-image: linear-gradient(to top, #fff 0%, #a861ff 100%); */
-          letter-spacing: 5px;
-          background-size: 100%;
-          -webkit-background-clip: text;
-          -moz-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          -moz-text-fill-color: transparent;
-          display: flex;
-          align-items: center;
-          cursor: pointer;
-          text-decoration: none;
-          font-size: 3rem;
-        }
-  
-        /* Menu Section */
-        .navbar__menu {
-          display: flex;
-          align-items: center;
-          list-style: none;
-          text-align: center;
-        }
-  
-        /* Main class list */
-        .navbar__item {
-          height: 80px;
-          letter-spacing: 5px;
-          margin: 0.25em;
-        }
-  
-        .navbar__item:hover {
-          transform: scale(1.085);
-          transition: 0.30s ease-in;
-          cursor: pointer;
-          text-shadow: 0 0 0.4em var(--clr-neon), 0 0 0.5em var(--clr-neon);
-          color: var(--clr-tdf); /*can use root*/
-          transition: all 0.1s ease;
-          /* text-decoration-line: overline;
-    text-decoration-color: var(--clr-neon);   */
-        }
-        
-        /* Sub class list */
-        .navbar__links {
-          color: var(--clr-tdf);
-          /* text-shadow: 0 0 0.2em #fff7, 0 0 0.3em var(--clr-neon); */
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-decoration: none;
-          padding: 0 1rem;
-          height: 100%;
-        }
-  
-        .navbar__btn {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 0 1rem;
-          width: 100%;
-        }
-  
-        /* .navbar__links:hover {
-          text-shadow: 0 0 0.25em #fff7, 0 0 0.35em var(--clr-neon);
-          color: var(--clr-tdf); /*can use root
-          transition: all 0.1s ease;
-        } */
-      
-      </style>
-  
-      <style>
-  
-        .logo{
-          background-color: #f11515;
-          height: 40rem ;
-   
-    text-align:center;
-        }
-          #background-video{
-            width:100%;
-                  height:100%;
-                  object-fit: cover;
-          }
-      </style>
-  
-      <!-- Style for Neon Contact button -->
-      <style>
-        /* Redo */
-        .button {
-          letter-spacing: 3px;
-          position: relative;
-          display: flex;
-          cursor: pointer;
-          border: var(--clr-neon) 0.125em solid;
-          border-radius: 0.25em;
-          text-shadow: 0 0 0.2em #fff7, 0 0 0.3em var(--clr-neon);
-          box-shadow: 0 0 0.5em var(--clr-neon), 0 0 0.5em var(--clr-neon);
-          margin: 0.25em;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          padding: 8px 20px;
-          height: 100%;
-          width: 100%;
-          border: none;
-          outline: none;
-          border-radius: 4px;
-          color: #f5fffa;
-        }
-  
-        .button::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          border-radius: 4px;
-          background: var(--clr-neon);
-          box-shadow: 0 0 1em var(--clr-neon);
-          z-index: -1;
-          opacity: 0;
-          transition: all 0.1s ease;
-        }
-  
-        .button:hover::after {
-          opacity: 1;
-        }
-  
-        .button:hover,
-        .button:focus {
-          color: white;
-        }
-  
-        .button:hover::before {
-          opacity: 0.8;
-        }
-      </style>
-  
-      <!-- navbar section -->
-      <nav class="navbar">
-        <div class="navbar__container">
-          <a href="#home" id="navbar__logo">
-            <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cpu" viewBox="0 0 16 16">
-          <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
-        </svg>-->
-  
-            &lt;/C4&gt;</a
-          >
-          <!-- For the mobile versions drop down -->
-          <div class="navbar__toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <!-- first child -->
-            <span class="bar"></span>
-            <!-- second child -->
-            <span class="bar"></span>
-            <!-- third child -->
-          </div>
-          <!-- actual navbar section -->
-          <ul class="navbar__menu">
-            <li class="navbar__item">
-              <a href="#home" class="navbar__links" id="home-page"><b>Home</b></a>
-            </li>
-            <li class="navbar__item">
-              <a href="#blog" class="navbar__links" id="home-page"><b>Blog</b></a>
-            </li>
-            <li class="navbar__btn">
-              <a href="#contact" class="button" id="home-page" target="_blank"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-    <label for="exampleDataList" class="form-label">Datalist example</label>
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-<datalist id="datalistOptions">
-  <option value="Events">
-  <option value="Career">
-  <option value="Education">
-  <option value="Tech Advances">
-  <option value="Other">
-</datalist>
-
-
-<div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
 </body>
 </html>
