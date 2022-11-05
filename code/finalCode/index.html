@@ -26,264 +26,78 @@
     <!-- Custom styles for this template -->
     <link href="practice.css" rel="stylesheet" />
     <link href="custom.scss" rel="stylesheet" />
-    
   </head>
   <body>
+    <style>@import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap");</style>
     <nav class="navbar">
-        <!-- navbar section -->
-        <style>
-          @import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap");
-  
-          :root {
-            --clr-neon: #a861ff;
-            --clr-bg: #202020;
-            --clr-tdf: #ffffff;
-            --font-size: 3rem;
-          }
-  
-          /* Scrollbar */
-          ::-webkit-scrollbar {
-            background: #141414;
-            backdrop-filter: blur(10px);
-            width: 0px;
-            height: 0px;
-          } /* Made it no show */
-  
-          *,
-          *::after,
-          *::before {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: "Jura", sans-serif;
-          }
-  
-          body {
-            padding: 0;
-            background: var(--clr-bg);
-            color: var(--clr-neon);
-          }
-  
-          /* Navbar Section */
-          .navbar {
-            background-color: #141414;
-            height: 95px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.3rem;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-          }
-  
-          .navbar__container {
-            display: flex;
-            justify-content: space-between;
-            height: 80px;
-            z-index: 1;
-            width: 100%;
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 50px;
-          }
-  
-          #navbar__logo {
-            background-color: var(--clr-tdf); /*can use root*/
-            text-shadow: 0 0 0.02em rgb(250, 240, 255), 0 0 0.1em var(--clr-neon);
-            /* background-image: linear-gradient(to top, #fff 0%, #a861ff 100%); */
-            letter-spacing: 5px;
-            background-size: 100%;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-text-fill-color: transparent;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 2.5rem;
-          }
-  
-          /* Menu Section */
-          .navbar__menu {
-            display: flex;
-            flex: 0;
-            align-items: center;
-            list-style: none;
-            text-align: center;
-            margin: 0;
-          }
-  
-          /* Main class list */
-          .navbar__item {
-            height: 100px;
-            letter-spacing: 5px;
-            margin: 0.25em;
-          }
-  
-          .navbar__item:hover {
-            transform: scale(1.085);
-            transition: 0.3s ease-in;
-            cursor: pointer;
-            /* text-decoration-line: overline;
-            text-decoration-color: var(--clr-neon);   */
-          }
-  
-          /* Sub class list */
-          .navbar__links {
-            color: var(--clr-tdf);
-            /* text-shadow: 0 0 0.2em #fff7, 0 0 0.3em var(--clr-neon); */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            padding: 0 1rem;
-            height: 100%;
-          }
-  
-          .navbar__btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 1rem;
-            width: 100%;
-          }
-  
-          .navbar__links:hover {
-            text-shadow: 0 0 0.25em #fff7, 0 0 0.35em var(--clr-neon);
-            color: var(--clr-tdf); /*can use root*/
-            transition: all 0.1s ease;
-          }
-  
-        </style>
-        <div class="navbar__container">
-          <a href="#home" id="navbar__logo">&lt;/C4&gt;</a>
-          <!-- For the mobile versions drop down -->
-          <div class="navbar__toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <!-- first child -->
-            <span class="bar"></span>
-            <!-- second child -->
-            <span class="bar"></span>
-            <!-- third child -->
-          </div>
-  
-          <ul class="navbar__menu">
-            <!-- actual navbar section -->
-            <li class="navbar__item">
-              <a href="#home" class="navbar__links" id="home-page"><b>Home</b></a>
-            </li>
-            <li class="navbar__item">
-              <a href="blog.html" class="navbar__links" id="home-page"><b>Blog</b></a>
-            </li>
-            <li class="navbar__btn">
-              <a href="contact.html" class="button" id="home-page"
-                >Contact</a
-              > <!--target="_blank"- to go to new page--> 
-            </li>
-          </ul>
+      <!-- navbar section -->
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">&lt;/C4&gt;</a>
+        <!-- For the mobile versions drop down -->
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <!-- first child -->
+          <span class="bar"></span>
+          <!-- second child -->
+          <span class="bar"></span>
+          <!-- third child -->
         </div>
-        <style>
-          /* Style for Neon Contact button */
-          /* Redo */
-          .button {
-            letter-spacing: 3px;
-            position: relative;
-            display: flex;
-            cursor: pointer;
-            border: var(--clr-neon) 0.125em solid;
-            border-radius: 0.25em;
-            text-shadow: 0 0 0.2em #fff7, 0 0 0.3em var(--clr-neon);
-            box-shadow: 0 0 0.5em var(--clr-neon), 0 0 0.5em var(--clr-neon);
-            margin: 0.25em;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            padding: 8px 20px;
-            height: 100%;
-            width: 100%;
-            border: none;
-            outline: none;
-            border-radius: 4px;
-            color: #f5fffa;
-          }
-  
-          .button::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 4px;
-            background: var(--clr-neon);
-            box-shadow: 0 0 1em var(--clr-neon);
-            z-index: -1;
-            opacity: 0;
-            transition: all 0.1s ease;
-          }
-  
-          .button:hover::after {
-            opacity: 1;
-          }
-  
-          .button:hover,
-          .button:focus {
-            color: white;
-          }
-  
-          .button:hover::before {
-            opacity: 0.8;
-          }
-        </style>
-      </nav>
+
+        <ul class="navbar__menu">
+          <!-- actual navbar section -->
+          <li class="navbar__item">
+            <a href="#home" class="navbar__links" id="home-page"><b>Home</b></a>
+          </li>
+          <li class="navbar__item">
+            <a href="blog.html" class="navbar__links" id="home-page"
+              ><b>Blog</b></a
+            >
+          </li>
+          <li class="navbar__btn">
+            <a href="contact.html" class="button" id="home-page">Contact</a>
+            <!--target="_blank"- to go to new page-->
+          </li>
+        </ul>
+      </div>
+         
+    </nav>
+
     <section>
-      <section class="intro_container">
+      <style>
+        /* Style for welcome vid */
+        .intro_container {
+          /* background-color: #f11515; */
+          height: 40rem;
+          text-align: center;
+        }
+        
+        #background-video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      </style>
+      <section class="intro_container" id="home">
         <!-- intro section-->
-        <video
-          id="background-video"
-          autoplay
-          loop
-          muted
-          poster="images/sbTyping.mp4"
-        >
-          <source
-            src="https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/8564974cc42904a8cdc3e255a005717e.mp4"
-            type="video/mp4"
-          />
+
+        <video id="background-video" autoplay loop muted>
+          <source src="images/typingHome.mp4" type="video/mp4" />
+          <!-- https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/8564974cc42904a8cdc3e255a005717e.mp4 -->
         </video>
-        <style>
-          /* Style for welcome vid */
-          .intro_container {
-            background-color: #f11515;
-            height: 40rem;
-            text-align: center;
-          }
-          #background-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        </style>
       </section>
     </section>
 
     <section>
-        <style>
-            /* .col-md-6{
-                margin: 1rem;
-            } */
-        </style>
       <div class="container marketing">
         <hr class="featurette-divider" />
 
         <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading fw-normal lh-1">
-              Who are we? <span class="text-muted"><br>A Computer Science Club</span>
+              Who are we?
+              <span class="text-muted"><br />A Computer Science Club</span>
             </h2>
-            <br>
+            <br />
             <p class="lead">
               And yes, this is the last block of representative placeholder
               content. Again, not really intended to be actually read, simply
@@ -292,19 +106,23 @@
             </p>
           </div>
           <div class="col-md-5">
+            
             <svg
               class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               width="500"
               height="500"
+              data="happy.svg"
               xmlns="http://www.w3.org/2000/svg"
               role="img"
               aria-label="Placeholder: 500x500"
               preserveAspectRatio="xMidYMid slice"
               focusable="false"
             >
+            
               <title>Placeholder</title>
+              
               <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+              <text x="50%" y="50%" fill="#aaa" dy=".3em"> </text>
             </svg>
           </div>
         </div>
@@ -312,6 +130,7 @@
         <hr class="featurette-divider" />
       </div>
     </section>
+
     <section>
       <div class="container marketing">
         <div class="row align-items-md-stretch">
@@ -328,45 +147,105 @@
               </button>
             </div>
           </div>
-         <br> 
+          <br />
           <div class="col-md-6 p-3">
             <div class="h-100 p-5 bg-light border rounded-3">
               <div class="accordion" id="accordionExample">
                 <h2>Goals</h2>
-                <br>
+                <br />
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
                       Career
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
                     <div class="accordion-body">
-                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      <strong>This is the first item's accordion body.</strong>
+                      It is shown by default, until the collapse plugin adds the
+                      appropriate classes that we use to style each element.
+                      These classes control the overall appearance, as well as
+                      the showing and hiding via CSS transitions. You can modify
+                      any of this with custom CSS or overriding our default
+                      variables. It's also worth noting that just about any HTML
+                      can go within the <code>.accordion-body</code>, though the
+                      transition does limit overflow.
                     </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
                       Community
                     </button>
                   </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample"
+                  >
                     <div class="accordion-body">
-                      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      <strong>This is the second item's accordion body.</strong>
+                      It is hidden by default, until the collapse plugin adds
+                      the appropriate classes that we use to style each element.
+                      These classes control the overall appearance, as well as
+                      the showing and hiding via CSS transitions. You can modify
+                      any of this with custom CSS or overriding our default
+                      variables. It's also worth noting that just about any HTML
+                      can go within the <code>.accordion-body</code>, though the
+                      transition does limit overflow.
                     </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
                       Fun
                     </button>
                   </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
                     <div class="accordion-body">
-                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      <strong>This is the third item's accordion body.</strong>
+                      It is hidden by default, until the collapse plugin adds
+                      the appropriate classes that we use to style each element.
+                      These classes control the overall appearance, as well as
+                      the showing and hiding via CSS transitions. You can modify
+                      any of this with custom CSS or overriding our default
+                      variables. It's also worth noting that just about any HTML
+                      can go within the <code>.accordion-body</code>, though the
+                      transition does limit overflow.
                     </div>
                   </div>
                 </div>
@@ -377,6 +256,7 @@
         <hr class="featurette-divider" />
       </div>
     </section>
+
     <section>
       <style>
         .bd-placeholder-img {
@@ -431,6 +311,7 @@
           -webkit-overflow-scrolling: touch;
         }
       </style>
+
       <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button
@@ -555,24 +436,60 @@
 
     <footer>
       <!-- footer section -->
-      
-  <div class="footer__container">
-    <div class="social__media">
-      <div class="social__media--wrap">
-        <div class="footer__logo">
-          <a href="#home" id="footer__logo">C4</a>
-        </div>
-        <p class="website__right">UpToDate 2023. Cornell College CS Club</p>
-        <div class="social__icons">
-          <!-- Needs wifi to see icons // not downloaded-->
-        <a href="something" id="social__icons--links"><i class="fas fa-envelope"></i></a>
-        <a href="" id="social__icons--links" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="" id="social__icons--links" target="_blank"><i class="fab fa-github"></i></a>
+      <div class="footer__container">
+        <div class="social__media">
+              <div class="row align-items-center" id="flex">
+                <div class="col-sm-3" id="a">
+                  <a href="#home" id="footer__logo">&lt;/C4&gt;</a>
+                </div>
+                <div class="col-4" id="b">
+                  <div>
+                    <ul class="footer_nav">
+                      <li class="footer__item">
+                        <a href="#home" class="footer__links" id="home-page"
+                          ><b>About</b></a
+                        >
+                      </li>
+                      <li class="footer__item">
+                        <a href="blog.html" class="footer__links" id="home-page"
+                          ><b>Blog</b></a
+                        >
+                      </li>
+                      <li class="footer__item">
+                        <a href="blog.html" class="footer__links" id="home-page"
+                          ><b>Contact</b></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="description overflow-hidden text-center">
+                    <hr />
+                    Designed by Ethan Kupka @ 2023
+                  </div>
+                </div>
+                <div class="col-5" id="c">
+                  <div class="email_text"><b>JOIN</b> our newsletter</div>
+                  <div>
+                    <form name="google-sheet">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Enter Cornell College Email"
+                          aria-label="Enter Cornell College Email"
+                          aria-describedby="button-addon2"
+                        />
+                        <button class="button1"><span>Join</span></button>
+                      </div>
+                    </form>
+                  </div>
+                
+              </div>
+            </div>
         </div>
       </div>
-    </div>
-</div>
     </footer>
+
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="practice.js"></script>
   </body>

@@ -11,48 +11,136 @@
     
 </head>
 <body>
+
+  <video width="320" height="240"  controls>
+    <source src="images/typingHome.mp4" type="video/mp4">
+    
+    Your browser does not support the video tag.
+ </video>
+ <video id="background-video" autoplay loop muted>
+  <source src="images/typingHome.mp4" type="video/mp4" />
+  <!-- https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/8564974cc42904a8cdc3e255a005717e.mp4 -->
+</video>
   <!-- style="border: 1px solid red;" -->
-      <div class="container text-center">
-        <div class="row justify-content-evenly">
-          <div class="col-sm-3 align-self-center">
+      <div class="container overflow-hidden text-center">
+        <div class="row gy-5 align-items-center">
+          <div class="col-sm-3" style="border: 1px solid red;">
             <a href="#home" id="navbar__logo">&lt;/C4&gt;</a>
           </div>
-          <div class="col--9">
-            <div class="row gx-4">
-              <div class="col-8 col-sm-6 justify-content-evenly">
-                <ul class="nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  </li>
-                  </ul>
-              </div>
-              <div class=" col-8 col-xs-6">
-                Join our newsletter
-              </div>
-              <div class=" col-4 col-xs-6">
-                <hr>
-                Designed by Ethan Kupka @ 2023
-              </div>
-              <div class=" col-8 col-xs-6 justify-content-evenly">
-                <div class="input-group mb-3 justify-content-evenly">
+          <div class="col-4" style="border: 1px solid red;">
+            <div class="p-3 border bg-light "><ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              </ul></div>
+            <div class="p-3 border bg-light "><hr>
+              Designed by Ethan Kupka @ 2023</div>
+          </div>
+          <div class="col-5" style="border: 1px solid red;">
+            <div class="p-3 border bg-light">Join our newsletter</div>
+            <div class="p-3 border bg-light">
+              <form name="google-sheet">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                  <button  class="button"><span>Join</span></button>
                   
-                  <input type="text" class="form-control justify-content-evenly" placeholder="Enter Your Cornell Email" aria-label="Enter Your Cornell Email" >
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2"><span class="material-symbols-outlined">
-                    send
-                    </span></button>
-                    
                 </div>
-              </div>
+                
+            </form>
             </div>
           </div>
+          
         </div>
-      </div>
-   
+        </div>
+        <style>
+          *{
+              margin: 0;
+              padding: 0;
+              font-family: 'poppins', sans-serif;
+              box-sizing: border-box;
+          }
+            
+          .button {
+            background: #8a10b3;
+            border: none;
+            outline: none;
+            
+           
+            
+            border-radius:  0 4px 4px 0;
+           
+            background-color: #f4511e;
+           
+            color: #FFFFFF;
+           
+            font-size: 15px;
+            padding: 20px;
+            width: 100px;
+            transition: all 0.5s;
+            cursor: pointer;
+            
+          }
+          .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+          }
+          
+          .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+          }
+          
+          .button:hover span {
+            padding-right: 25px;
+          }
+          
+          .button:hover span:after {
+            opacity: 1;
+            right: 0;
+          }
+              
+          form{
+             
+              display: flex;
+              width: fit-content;
+              
+          }
+          
+          form input{
+            background: #8a10b3;
+              border: 0;
+              outline: none;
+              padding: 10px 20px;
+              height: 70px;
+              width: 400px;
+              font-size: 16px;
+              border-radius: 4px 0 0 4px;
+          }
+          
+          form button{
+              background: #8a10b3;
+              border: none;
+              outline: none;
+              height: 70px;
+              width: 100px;
+              cursor: pointer;
+              border-radius:  0 4px 4px 0;
+          }
+          
+         
+          
+          </style>
 </body>
 </html>
