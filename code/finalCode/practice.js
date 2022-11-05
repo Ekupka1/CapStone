@@ -25,3 +25,25 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
+
+
+// --------------------------------------Footer Email
+
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyRRDkkcEUb1fRxl-n4dqJ1OZ9pDgrr7H5XV5ld0_2ygsKEmdaQm9uf35w-JQ8YhvrX/exec'
+        const form = document.forms['google-sheet']
+        const msg = document.getElementById('msg')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Thank you for sub!"
+                setTimeout(function(){
+                msg.innerHTML = ""},
+                5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+          })
+      
