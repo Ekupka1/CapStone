@@ -47,3 +47,9 @@ navLogo.addEventListener('click', hideMobileMenu);
             .catch(error => console.error('Error!', error.message))
           })
       
+// ------------------------------------------------Blog
+$('.container').isotope({
+  itemSelector: '.card',
+  layoutMode: 'masonry',
+  sortBy : 'random'
+});
