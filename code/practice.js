@@ -53,3 +53,6 @@ $('.container').isotope({
   layoutMode: 'masonry',
   sortBy : 'random'
 });
+
+
+// -----------------------------------------------------Text main
