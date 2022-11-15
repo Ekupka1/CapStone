@@ -1,118 +1,171 @@
-// addEventListener('scroll', (event) => {});
 
-// onscroll = (event) => { 
-  const carouselText = [
-    {text: "Apple", color: "red"},
-    {text: "Orange", color: "orange"},
-    {text: "Lemon", color: "yellow"}
-  ]
-  
-  $( index.html ).ready(async function() {
-    carousel(carouselText, "#feature-text")
-  });
-  
-  async function typeSentence(sentence, eleRef, delay = 100) {
-    const letters = sentence.split("");
-    let i = 0;
-    while(i < letters.length) {
-      await waitForMs(delay);
-      $(eleRef).append(letters[i]);
-      i++
-    }
-    return;
-  }
-  
-  async function deleteSentence(eleRef) {
-    const sentence = $(eleRef).html();
-    const letters = sentence.split("");
-    let i = 0;
-    while(letters.length > 0) {
-      await waitForMs(100);
-      letters.pop();
-      $(eleRef).html(letters.join(""));
-    }
-  }
-  
-  async function carousel(carouselList, eleRef) {
-      var i = 0;
-      while(true) {
-        updateFontColor(eleRef, carouselList[i].color)
-        await typeSentence(carouselList[i].text, eleRef);
-        await waitForMs(1500);
-        await deleteSentence(eleRef);
-        await waitForMs(500);
-        i++
-        if(i >= carouselList.length) {i = 0;}
-      }
-  }
-  
-  function updateFontColor(eleRef, color) {
-    $(eleRef).css('color', color);
-  }
-  
-  function waitForMs(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))
-  }
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
 
-// };
-// function waitForMs(ms) {
-//   return new Promise(resolve => setTimeout(resolve, ms))
+const textArray = ["hard"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+
+// -----------------------------------------------------------------------------------------------------------------------------------
+// var inputReady = true;
+// var input = $('.404-input');
+// input.focus();
+// $('.container').on('click', function(e){
+//   input.focus();
+// });
+
+// input.on('keyup', function(e){
+//   $('.new-output').text(input.val());
+//   // console.log(inputReady);
+// });
+
+// $('.four-oh-four-form').on('submit', function(e){
+//   e.preventDefault();
+//   var val = $(this).children($('.404-input')).val().toLowerCase();
+//   var href;
+
+// 	 if (val === 'kittens'){
+//     showKittens();
+//   }else {
+//     resetForm();
+//   }
+// });
+
+// function resetForm(withKittens){
+//   var message = "Sorry that command is not recognized."
+//   var input = $('.404-input');
+
+//   if (withKittens){
+//     $('.kittens').removeClass('kittens');
+//     message = "Huzzzzzah Kittehs!"
+//   }
+
+//   $('.new-output').removeClass('new-output');
+//   input.val('');
+//   $('.terminal').append('<p class="prompt">' + message + '</p><p class="prompt output new-output"></p>');
+
+//   $('.new-output').velocity(
+//     'scroll'
+//   ), {duration: 100}
 // }
 
+// 	function showKittens(){
+// 		$('.terminal').append("<div class='kittens'>"+
+// 								 "<p class='prompt'>	                             ,----,         ,----,                                          ,---,</p>" +
+// 								 "<p class='prompt'>       ,--.                ,/   .`|       ,/   .`|                     ,--.              ,`--.' |</p>" +
+// 								 "<p class='prompt'>   ,--/  /|    ,---,     ,`   .'  :     ,`   .'  :     ,---,.        ,--.'|   .--.--.    |   :  :</p>" +
+// 								 "<p class='prompt'>,---,': / ' ,`--.' |   ;    ;     /   ;    ;     /   ,'  .' |    ,--,:  : |  /  /    '.  '   '  ;</p>" +
+// 								 "<p class='prompt'>:   : '/ /  |   :  : .'___,/    ,'  .'___,/    ,'  ,---.'   | ,`--.'`|  ' : |  :  /`. /  |   |  |</p>" +
+// 								 "<p class='prompt'>|   '   ,   :   |  ' |    :     |   |    :     |   |   |   .' |   :  :  | | ;  |  |--`   '   :  ;</p>" +
+// 								 "<p class='prompt'>'   |  /    |   :  | ;    |.';  ;   ;    |.';  ;   :   :  |-, :   |   \\ | : |  :  ;_     |   |  '</p>" +
+// 								 "<p class='prompt'>|   ;  ;    '   '  ; `----'  |  |   `----'  |  |   :   |  ;/| |   : '  '; |  \\  \\    `.  '   :  |</p>" +
+// 								 "<p class='prompt'>:   '   \\   |   |  |     '   :  ;       '   :  ;   |   :   .' '   ' ;.    ;   `----.   \\ ;   |  ;</p>" +
+// 								 "<p class='prompt'>'   : |.  \\ |   |  '     '   :  |       '   :  |   '   :  ;/| '   : |  ; .'  /  /`--'  /  `--..`;  </p>" +
+// 								 "<p class='prompt'>|   | '_\\.' '   :  |     ;   |.'        ;   |.'    |   |    \\ |   | '`--'   '--'.     /  .--,_   </p>" +
+// 								 "<p class='prompt'>'   : |     ;   |.'      '---'          '---'      |   :   .' '   : |         `--'---'   |    |`.  </p>" +
+// 								 "<p class='prompt'>;   |,'     '---'                                  |   | ,'   ;   |.'                    `-- -`, ; </p>" +
+// 								 "<p class='prompt'>'---'                                              `----'     '---'                        '---`'</p>" +
+// 								 "<p class='prompt'>                                                              </p></div>");
 
-var TxtRotate = function(el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
-};
+		
+// 		var lines = $('.kittens p');
+// 		$.each(lines, function(index, line){
+// 			setTimeout(function(){
+// 				$(line).css({
+// 					"opacity": 1
+// 				});
 
-TxtRotate.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+// 				textEffect($(line))
+// 			}, index * 100);
+// 		});
 
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
+// 		$('.new-output').velocity(
+// 			'scroll'
+// 		), {duration: 100}
 
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+// 		setTimeout(function(){
+// 			var gif;
 
-  var that = this;
-  var delta = 300 - Math.random() * 100;
+// 			$.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kittens', function(result){
+// 				gif = result.data.image_url;
+// 				$('.terminal').append('<img class="kitten-gif" src="' + gif + '"">');
+// 				resetForm(true);
+// 			});
+// 		}, (lines.length * 100) + 1000);
+// 	}
 
-  if (this.isDeleting) { delta /= 2; }
+// 	function textEffect(line){
+// 		var alpha = [';', '.', ',', ':', ';', '~', '`'];
+// 		var animationSpeed = 10;
+// 		var index = 0;
+// 		var string = line.text();
+// 		var splitString = string.split("");
+// 		var copyString = splitString.slice(0);
 
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
+// 		var emptyString = copyString.map(function(el){
+// 		    return [alpha[Math.floor(Math.random() * (alpha.length))], index++];
+// 		})
 
-  setTimeout(function() {
-    that.tick();
-  }, delta);
-};
+// 		emptyString = shuffle(emptyString);
 
-window.onload = function() {
-  var elements = document.getElementsByClassName('txt-rotate');
-  for (var i=0; i<elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-rotate');
-    var period = elements[i].getAttribute('data-period');
-    if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
-    }
-  }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-  document.body.appendChild(css);
-};
+// 		$.each(copyString, function(i, el){
+// 		    var newChar = emptyString[i];
+// 		    toUnderscore(copyString, line, newChar);
+
+// 		    setTimeout(function(){
+// 		      fromUnderscore(copyString, splitString, newChar, line);
+// 		    },i * animationSpeed);
+// 		  })
+// 	}
+
+// 	function toUnderscore(copyString, line, newChar){
+// 		copyString[newChar[1]] = newChar[0];
+// 		line.text(copyString.join(''));
+// 	}
+
+// 	function fromUnderscore(copyString, splitString, newChar, line){
+// 		copyString[newChar[1]] = splitString[newChar[1]];
+// 		line.text(copyString.join(""));
+// 	}
+
+
+// 	function shuffle(o){
+// 	    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+// 	    return o;
+// 	};
