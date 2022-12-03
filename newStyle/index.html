@@ -1,0 +1,554 @@
+<!-- 2022-2023 Website Model // Made with BootStrap -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home-Page</title>
+
+  <!-- BootStrap style sheets -->
+  <link href="sass/main.css" rel="stylesheet"
+</head>
+
+
+<body>
+  <!-- <style>
+    @import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap");
+  </style> -->
+
+  <nav class="navbar">
+    <!-- navbar section // no style guide in html-->
+    <div class="navbar__container">
+      <a href="#home" id="navbar__logo">&lt;/C4&gt;</a>
+      <!-- For the mobile versions drop down -->
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <!-- first child -->
+        <span class="bar"></span>
+        <!-- second child -->
+        <span class="bar"></span>
+        <!-- third child -->
+      </div>
+
+      <ul class="navbar__menu">
+        <!-- initial navbar section -->
+        <li class="navbar__item">
+          <a href="#home" class="navbar__links" id="home-page"><b>Home</b></a>
+        </li>
+        <li class="navbar__item">
+          <a href="blog.html" class="navbar__links" id="home-page"><b>Blog</b></a>
+        </li>
+        <li class="navbar__btn">
+          <a href="contact.html" class="button" id="home-page">Contact</a>
+          <!--target="_blank"- to go to new page-->
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="intro_container" id="home">
+    <!-- intro section // style in html intro_container section-->
+    <!-- <style>
+      /* Style for welcome vid */
+      .intro_container {
+        /* background-color: #f11515; */
+        height: 45rem;
+        position: relative;
+        z-index: 0;
+      }
+
+      #background-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .intro_text {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+
+      .intro_text p {
+        font-size: 3rem;
+        letter-spacing: 0.5rem;
+        overflow: hidden;
+        color: white;
+        text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
+      }
+
+      .intro_text p span.typed-text {
+        font-weight: normal;
+
+      }
+
+      .intro_text p span.cursor {
+        display: inline-block;
+        margin-left: 0.1rem;
+        width: 3px;
+        animation: blink 1s infinite;
+      }
+
+      .intro_text p span.cursor.typing {
+        animation: none;
+      }
+
+      @keyframes blink {
+        0% {
+          background-color: white;
+          text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
+        }
+
+        49% {
+          background-color: white;
+          text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
+        }
+
+        50% {
+          background-color: transparent;
+        }
+
+        99% {
+          background-color: transparent;
+        }
+
+        100% {
+          background-color: white;
+          text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
+        }
+      }
+    </style> -->
+
+    <video id="background-video" autoplay loop muted>
+      <!-- <source src="images/sbTyping.mp4" type="video/mp4" /> -->
+      <source src="images/sideTyping.mp4" type="video/mp4" />
+      <!-- https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/8564974cc42904a8cdc3e255a005717e.mp4 -->
+    </video>
+    <div class="intro_text">
+      <p>><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+    </div>
+  </section>
+
+  <section class="about">
+    <!-- about section // style in html about section-->
+    <!-- <style>
+      /* About ------------------------------------------------------------------- */
+      .text-muted {
+        color: var(--bs-link-hover-color) !important;
+      }
+
+      .lead {}
+    </style> -->
+    <div class="container marketing">
+      <hr class="featurette-divider" />
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">
+            Who are we?
+            <span class="text-muted"><br />A Computer Science Club</span>
+          </h2>
+          <br />
+          <p class="lead">
+            We are the cornell College Computer science club. We strive to hone our skills and create a strong friendly environment.
+          </p>
+          <br />
+        </div>
+        <div class="col-md-5">
+
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500" data="happy.svg" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <title>About</title>
+
+            <rect width="100%" height="100%" fill="#eee" />
+            <text x="50%" y="50%" fill="#aaa" dy=".3em"> </text>
+            <image href="images/background.png" />
+          </svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+    </div>
+  </section>
+
+  <section class="additional_info">
+    <!-- additional_info section // style in html additional_info section-->
+    <!-- <style>
+      /* Goals and Meeting ------------------------------------------------------------------- */
+      .accordion {
+        /* --bs-accordion-btn-focus-border-color: #ea86fe!important; */
+        --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(149, 142, 153, 0.25) !important;
+        --bs-accordion-active-color: #fff;
+        --bs-accordion-active-bg: #888889 !important;
+
+        --bs-accordion-btn-icon: url(data:image/svg + xml,
+ %3csvgxmlns='<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200' viewBox="0 0 16 16" fill="%23212529" 
+ %3e%3cpathfill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" /%3e%3c/svg%3e) !important;
+
+        --bs-accordion-btn-active-icon: url(data:image/svg + xml,
+        %3csvgxmlns='<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200' viewBox="0 0 16 16" fill="%23212529" 
+        %3e%3cpathfill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" /%3e%3c/svg%3e) !important;
+      }
+    </style> -->
+    
+    <div class="container marketing">
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6 bs-gray p-3">
+          <div class="h-100 p-5  border rounded-3">
+            <h2>When Do We Meet?</h2>
+            <br/>
+            <p>
+              We meet every first and third monday of every block
+              Where?: 218 West Hall
+              Time?: 3:30pm - 4:30pm
+            </p>
+            <a class="btn btn-lg btn-primary" href="#">Contact</a>
+
+          </div>
+        </div>
+        <br/>
+        <div class="col-md-6 p-3">
+          <div class="h-100 p-5 bs-gray border rounded-3">
+            <div class="accordion" id="accordionExample">
+              <h2>Goals</h2>
+              <br />
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Career
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>We strive to enhance our resume</strong>
+                    We perform resume workshops, coding projects to add to our experiences. 
+                    And work to expand our network.
+                    <code>.ram-Strong</code>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Community
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong>
+                    It is hidden by default, until the collapse plugin adds
+                    the appropriate classes that we use to style each element.
+                    These classes control the overall appearance, as well as
+                    the showing and hiding via CSS transitions. You can modify
+                    any of this with custom CSS or overriding our default
+                    variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Fun
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong>
+                    It is hidden by default, until the collapse plugin adds
+                    the appropriate classes that we use to style each element.
+                    These classes control the overall appearance, as well as
+                    the showing and hiding via CSS transitions. You can modify
+                    any of this with custom CSS or overriding our default
+                    variables. It's also worth noting that just about any HTML
+                    can go within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+    </div>
+  </section>
+
+  <section class="slide_show">
+    <!-- slide_show section // style in html slide_show section-->
+    <!-- <style>
+      /* Slide Show ------------------------------------------------------------------- */
+      .btn-primary {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #0d6efd;
+        --bs-btn-border-color: #a4adba;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: var(--bs-link-hover-color);
+        --bs-btn-hover-border-color: var(--bs-link-hover-color);
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #0a58ca;
+        --bs-btn-active-border-color: #0a53be;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #0d6efd;
+        --bs-btn-disabled-border-color: #0d6efd;
+      }
+
+      .btn {
+
+        border: var(--bs-btn-border-width) var(--clr-neon);
+
+        background-color: var(--clr-neon);
+      }
+
+      /* Carousel ------------------------------------------------------------------- */
+      /* Carousel base class */
+      .carousel {
+        margin-bottom: 4rem;
+      }
+
+      /* Since positioning the image, we need to help out the caption */
+      .carousel-caption {
+        bottom: 3rem;
+        z-index: 10;
+      }
+
+      /* Declare heights because of positioning of img element */
+      .carousel-item {
+        height: 32rem;
+      }
+
+      /* Featurettes
+  ------------------------- */
+      .featurette-divider {
+        margin: 5rem 0;
+        /* Space out the Bootstrap <hr> more */
+      }
+
+      /* Thin out the marketing headings */
+      /* rtl:begin:remove */
+      .featurette-heading {
+        letter-spacing: -0.05rem;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+      }
+
+      .carousel-control-next-icon,
+      .carousel-control-prev-icon {
+        text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
+        color: #000000;
+
+      }
+
+      .container h1,
+      p {
+        text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
+      }
+    </style> -->
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+            <image href="images/background.png" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>First Meeting</h1>
+              <p>
+                Some representative placeholder content for the first slide of
+                the carousel.
+              </p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="#">Read More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+            <image href="images/background.png" />
+            <!-- <image href="images/fair.jpg" height="100%" width="100%" object-fit="cover"/> -->
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>What Do you Want?</h1>
+              <p>
+               We want to hear from you! Got any ideas?
+              </p>
+              <p><a class="btn btn-lg btn-primary" href="#">Suggestions?</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+            <image href="images/background.png" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Up And Coming Event!</h1>
+              <p>
+                We plan to host a Hackathon during the second semester of 2023 year!
+              </p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="#">Read More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    <!-- footer section // no style guide in html -->
+    <div class="footer__container">
+      <div class="social__media">
+        <div class="row align-items-center" id="flex">
+          <div class="col-sm-3" id="name">
+            <a href="#home" id="footer__logo">&lt;/C4&gt;</a>
+          </div>
+          <div class="col-4" id="footer_links">
+            <div>
+              <ul class="footer_nav">
+                <li class="footer__item">
+                  <a href="#home" class="footer__links" id="home-page"><b>About</b></a>
+                </li>
+                <li class="footer__item">
+                  <a href="blog.html" class="footer__links" id="home-page"><b>Blog</b></a>
+                </li>
+                <li class="footer__item">
+                  <a href="contact.html" class="footer__links" id="home-page"><b>Contact</b></a>
+                </li>
+              </ul>
+            </div>
+            <div class="description overflow-hidden text-center">
+              <hr />
+              Designed by Ethan Kupka @ 2023
+            </div>
+          </div>
+          <div class="col-5" id="contact_email">
+            <div class="email_text">JOIN<span> our newsletter</span></div>
+            <div>
+              <form name="google-sheet">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Enter Cornell College Email" required
+                    aria-label="Enter Cornell College Email" aria-describedby="button-addon2" />
+                  <button class="button1" type="Submit"><span>Join</span></button>
+                </div>
+              </form>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BootStrap JS -->
+  <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <!-- Personal JS -->
+  <script src="practice.js"></script>
+
+</body>
+
+</html>

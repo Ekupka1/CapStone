@@ -9,12 +9,13 @@
   <title>Contact-Page</title>
 
   <!-- BootStrap style sheets -->
+  <!-- <link href="sass/main.css" rel="stylesheet"/> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 
+
   <!-- Personal style sheets -->
   <link href="styles/practice.css" rel="stylesheet" />
-  <link href="styles/custom.css" rel="stylesheet" />
 </head>
 
 
@@ -51,137 +52,336 @@
     </div>
   </nav>
 
-  <section class="additional_info">
-    <!-- additional_info section // style in html additional_info section-->
+  <section class="suggestion" id="home">
+    <!-- suggestion section // style in html suggestion section-->
+    <style>
+      .suggestion {
+        background: #6441A5 !important;
+        padding: 3rem 0 3rem 0;
+      }
+
+      #sug_h2{
+        color: #ffffff;
+        font-size: 2.25rem;
+      }
+
+      #sug_card {
+        margin: auto;
+        background: #202020;
+        border-color: #202020 !important;
+        padding: .25rem;
+        border-radius: 20px;
+      }
+
+      #sug_btn {
+        align-self: center;
+        color: #ffffff;
+      }
+
+      .form{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form input{
+        margin: 0;
+      }
+    </style>
     <div class="container marketing">
-
-
-      <div class="col-md-6 p-3">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <div class="accordion" id="accordionExample">
-            <h2>Have Any <span>Suggestions?</span></h2>
+      <div class="col-md-9" id="sug_card">
+        <div class="h-50 p-5 rounded-3">
+            <h2 id="sug_h2">Have Any <span>Suggestions?</span></h2>
             <br />
+            <form class="form" name="google-sheet-suggestion">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label fs-5">Name</label>
+                <input type="name" name="Name" class="form-control" id="exampleFormControlInput1" placeholder="name" required/>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label fs-5">Email address</label>
+                <input type="email" name="Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required/>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label fs-5">Suggestion</label>
+                <textarea class="form-control" name="Suggestion" id="exampleFormControlTextarea1" placeholder="I think we should..., I would like to see..., Can we code..." rows="3" required></textarea>
+              </div>
+              <br />
+              <button class="btn fs-5" type="submit"><span>Submit</span></button>
+            </form>
+          </div>
+        </div>
+    </div>
+  </section>
 
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Name</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Whats on your mind?</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
+  <div class="skew-c"></div>
 
-            </h2>
+  <section class="contacts">
+    <style>
+      .contacts {
+        background: #141414 !important;
+        padding: 12rem 0 6rem 0;
+        justify-content: center;
+      }
 
+      /* Add rounded corners to the top left and the top right corner of the image */
+      img {
+        border-radius: 25px;
+        width: 20rem;
+        height: auto;
+      }
+
+      .qr {
+        border-radius: 10px;
+        width: 12.5rem;
+        height: auto;
+      }
+
+      /* Float four columns side by side */
+      .columns {
+        margin: 3rem 3rem 3rem 3rem;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      /* Remove extra left and right margins, due to padding in columns */
+      .rows {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center
+      }
+
+      /* Clear floats after the columns */
+      .rows:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Style the counter cards */
+      .cards {
+        width: 20rem;
+        position: relative;
+        text-align: center;
+        border-radius: 25px;
+        background-color: #fff
+      }
+
+      .cards:hover {
+        transform: scale(1.1);
+        transition: transform .2s;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #6441A5;
+        border-radius: 23px;
+      }
+
+      .container:hover .overlay {
+        opacity: 1;
+      }
+
+      .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      #discord_btn {
+        font-size: 1.15rem;
+        background-color: #202020;
+      }
+
+      #discord_btn:hover {
+        background-color: #928dab;
+      }
+
+      /* Responsive columns - one column layout (vertical) on small screens */
+      @media screen and (max-width: 600px) {
+        .columns {
+          width: 70%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+    <div class="row justify-content-center">
+      <div class="columns">
+        <div class="container">
+          <div class="cards"><img src="images/email.png" alt="Nature" class="discord">
+            <div class="overlay">
+              <div class="text">c4@cornellcollege.edu</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="container">
+          <div class="cards"><img src="images/discord.svg" alt="Nature" class="discord">
+            <div class="overlay">
+              <div class="text"><img src="images/qr.jpg" alt="Nature" class="qr"><br>
+                </br> <a class="btn btn-lg btn-primary" href="https://discord.gg/BYZrufr" id="discord_btn">Join The
+                  Discord!</a></div><!-- WILL NEED TO SWAP DISCORD LINK AFTER 2023 YEAR!!! -->
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <hr class="featurette-divider" />
-    
   </section>
 
-  <section>
-    <div class="container marketing">
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-    </div>
-    <div class="container marketing">
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-</div>
-    <hr class="featurette-divider" />
-  </section>
+  <section class="members">
+    <style>
+      .members {
+        background: linear-gradient(#141414 10%, #202020 90%);
+        padding: 3rem 0 5rem 0;
+      }
 
-  <section>
+      .memberPic {
+        border-radius: 50%;
+        width: 15rem;
+        resize: 10rem;
+        top: 30rem;
+        height: auto;
+      }
+
+      #memberBtn{
+        background-color: #928dab;
+      }
+
+      #memberBtn:hover{
+        background-color: #a861ff;
+      }
+
+      .accordion-body p {
+        color: #ffffff;
+        text-align: start;
+        padding-left: 5rem;
+        font-size: 1.05rem;
+      }
+
+      .fw-normal{
+        color:#ffffff
+      }
+    </style>
     <div class="container marketing">
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg>
-
-          <h2 class="fw-normal">President</h2>
-          <a class="btn btn-secondary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
-            aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-          <div class="col">
-            <div class="collapse multi-collapse" id="multiCollapseExample1">
-              <div class="card card-body">
-                Some placeholder content for the first collapse component of this multi-collapse example. This panel is
-                hidden by default but revealed when the user activates the relevant trigger.
-              </div>
-            </div>
-          </div>
-          </p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg>
-
-          <h2 class="fw-normal">Secretary</h2>
-          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.
-          </p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg>
-
-          <h2 class="fw-normal">Heading</h2>
-          <p>And lastly this, the third column of representative placeholder content.</p>
+        <div class="col-lg-4 p-4"><!-- first member -->
+          <img src="images/file.jpg" alt="Nature" class="memberPic">
+          <br>
+          <h2 class="fw-normal"><br />President</h2>
+          <p class="description">Handles planing out events and setting up the dates and times for future meetings looks over an problem
+            addressed by other members.</p>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
-                Career
-              </button>
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne" id="memberBtn">
+                View Details &raquo;
+              </button><br />
             </h2>
-            <!-- <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-              </div> -->
           </div>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong>
-              It is shown by default, until the collapse plugin adds the
-              appropriate classes that we use to style each element.
-              These classes control the overall appearance, as well as
-              the showing and hiding via CSS transitions. You can modify
-              any of this with custom CSS or overriding our default
-              variables. It's also worth noting that just about any HTML
-              can go within the <code>.accordion-body</code>, though the
-              transition does limit overflow.
+              <p><br/>
+              Name: <code>First Last</code><br />
+              Year: <code>Class of 20##</code><br />
+              Email: <code>name@cornellcollege.edu</code><br />
+              Fun Fact: <code>Likes to draw</code></p>
             </div>
           </div>
         </div>
-      </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4 p-4"><!-- second member -->
+          <img src="images/file.jpg" alt="Nature" class="memberPic">
+          <h2 class="fw-normal"><br />Vice President & Treasure</h2>
+          <p>Handles the money of the program setting up the funding and helping the president with needed tasks.</p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                aria-expanded="true" aria-controls="collapseOne" id="memberBtn">
+                View Details &raquo;
+              </button><br />
+            </h2>
+          </div>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p><br/>
+                Name: <code>First Last</code><br />
+                Year: <code>Class of 20##</code><br />
+                Email: <code>name@cornellcollege.edu</code><br />
+                Fun Fact: <code>Likes to draw</code></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 p-4"><!-- third member -->
+          <img src="images/file.jpg" alt="Nature" class="memberPic">
+          <h2 class="fw-normal"><br />Secretary</h2>
+          <p>Handles sending out weekly emails to our members and printing out documents for meetings.</p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                aria-expanded="true" aria-controls="collapseOne" id="memberBtn">
+                View Details &raquo;
+              </button><br />
+            </h2>
+          </div>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p><br/>
+                Name: <code>First Last</code><br />
+                Year: <code>Class of 20##</code><br />
+                Email: <code>name@cornellcollege.edu</code><br />
+                Fun Fact: <code>Likes to draw</code></p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-lg-4 p-4"><!-- fourth member --
+          <img src="images/file.jpg" alt="Nature" class="memberPic">
+          <br>
+          <h2 class="fw-normal"><br />President</h2>
+          <p class="description">Handles planing out events and setting up the dates and times for future meetings looks over an problem
+            addressed by other members.</p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne" id="memberBtn">
+                View Details &raquo;
+              </button><br />
+            </h2>
+          </div>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p><br/>
+              Name: <code>First Last</code><br />
+              Year: <code>Class of 20##</code><br />
+              Email: <code>name@cornellcollege.edu</code><br />
+              Fun Fact: <code>Likes to draw</code></p>
+            </div>
+          </div>
+        </div> -->
+      </div>
     </div><!-- /.row -->
-    <hr class="featurette-divider" />
   </section>
-
 
   <footer>
     <!-- footer section // no style guide in html -->
@@ -213,16 +413,15 @@
           <div class="col-5" id="contact_email">
             <div class="email_text">JOIN<span> our newsletter</span></div>
             <div>
-              <form name="google-sheet">
+              <form name="google-sheet-email">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Enter Cornell College Email" required
+                  <input type="email" name= "Email" class="form-control" placeholder="Enter Cornell College Email" required
                     aria-label="Enter Cornell College Email" aria-describedby="button-addon2" />
-                  <button class="button1" type="Submit"><span>Join</span></button>
+                  <button class="button1" type="submit"><span>Join</span></button>
                 </div>
               </form>
               <span id="msg"></span>
             </div>
-
           </div>
         </div>
       </div>

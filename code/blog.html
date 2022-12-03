@@ -1,269 +1,780 @@
 <!-- 2022-2023 Website Model // Made with BootStrap -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog-Page</title>
 
-    <!-- BootStrap style sheets -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-   
-    <!-- Personal style sheets -->
-    <link href="practice.css" rel="stylesheet" />
-    <!-- <link href="custom.scss" rel="stylesheet" /> -->
-    <link href="custom.css" rel="stylesheet" type="text/css">
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog-Page</title>
 
-  
-  <body>
-    <!-- <style>@import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap");</style> -->
+  <!-- BootStrap style sheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 
-    <nav class="navbar">
-      <!-- navbar section // no style guide in html-->
-      <div class="navbar__container">
-        <a href="#home" id="navbar__logo">&lt;/C4&gt;</a>
-        <!-- For the mobile versions drop down -->
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <!-- first child -->
-          <span class="bar"></span>
-          <!-- second child -->
-          <span class="bar"></span>
-          <!-- third child -->
-        </div>
+  <!-- Personal style sheets -->
+  <link href="styles/practice.css" rel="stylesheet" />
+  <!-- <link href="custom.scss" rel="stylesheet" /> -->
+  <link href="styles/personal.css" rel="stylesheet" />
+  <!-- <link href="styles/custom.css" rel="stylesheet" type="text/css"> -->
+</head>
 
-        <ul class="navbar__menu">
-          <!-- initial navbar section -->
-          <li class="navbar__item">
-            <a href="index.html" class="navbar__links" id="home-page"><b>Home</b></a>
-          </li>
-          <li class="navbar__item">
-            <a href="#home" class="navbar__links" id="home-page"
-              ><b>Blog</b></a
-            >
-          </li>
-          <li class="navbar__btn">
-            <a href="contact.html" class="button" id="home-page">Contact</a>
-            <!--target="_blank"- to go to new page-->
-          </li>
-        </ul>
-      </div>  
-    </nav>
 
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Library</li>
-      </ol>
-    </nav>
+<body>
+  <script src="practice.js"></script>
+  <!-- <style>@import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap");</style> -->
+  <nav class="navbar">
+    <!-- navbar section // no style guide in html-->
+    <div class="navbar__container">
+      <a href="#home" id="navbar__logo">&lt;/C4&gt;</a>
+      <!-- For the mobile versions drop down -->
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <!-- first child -->
+        <span class="bar"></span>
+        <!-- second child -->
+        <span class="bar"></span>
+        <!-- third child -->
+      </div>
 
-    <section >
-<div class="blog-card">
-    <div class="meta">
-      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
-      <ul class="details">
-        <li class="author"><a href="#">John Doe</a></li>
-        <li class="date">Aug. 24, 2015</li>
-        <li class="tags">
-          <ul>
-            <li><a href="#">Learn</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-          </ul>
+      <ul class="navbar__menu">
+        <!-- initial navbar section -->
+        <li class="navbar__item">
+          <a href="index.html" class="navbar__links" id="home-page"><b>Home</b></a>
+        </li>
+        <li class="navbar__item">
+          <a href="#home" class="navbar__links" id="home-page"><b>Blog</b></a>
+        </li>
+        <li class="navbar__btn">
+          <a href="contact.html" class="button" id="home-page">Contact</a>
+          <!--target="_blank"- to go to new page-->
         </li>
       </ul>
     </div>
-    <div class="description">
-      <h1>Learning to Code</h1>
-      <h2>Opening a door to the future</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-      <p class="read-more">
-        <a href="#">Read More</a>
-      </p>
-    </div>
-  </div>
-</section>
+  </nav>
 
-   
-
-    <section>
-      <div class="container">
-      <div class="card card1">
-        <img class="adve" src="https://cdn.cnn.com/cnnnext/dam/assets/170407220921-07-iconic-mountains-pitons-restricted.jpg" alt="Mountains">
-        <div class="text">
-          <h4 class="adv">Adventure</h4> 
-          <h5>Mountain</h5>
-        </div>
-      </div>
-        <div class="card card2">
-        <div class="text">
-          <h4 class="fash">Fashion</h4> 
-          <h5>dresses</h5>
-        </div>
-      </div>
-        <div class="card card3">
-          <img class="food" src="https://www.rockrecipes.com/wp-content/uploads/2011/04/DSC3343-e1458916544317.jpg">
-        <div class="text">
-          <h4 class="cook">Cooking</h4> 
-          <h5 class="pic">This is a pastry</h5>
-        </div>
-      </div>
-        <div class="card card1">
-        <img class="adve" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Lake_mapourika_NZ.jpeg" alt="Mountains">
-        <div class="text">
-          <h4 class="adv">Adventure</h4> 
-          <h5>lake</h5>
-        </div>
-      </div>
-        <div class="card card2">
-        <div class="text">
-          <h4 class="fash">Fashion</h4> 
-          <h5>shirts</h5>
-        </div>
-      </div>
-        <div class="card card3">
-          <img class="food" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/fc7068ad8096421e8ce04e9e3dcc4fbd/BFV37839_PuffPastryBreafkastCups_FB1080SQ.jpg">
-        <div class="text">
-          <h4 class="cook">Cooking</h4> 
-          <h5 class="pic">This is an egg</h5>
-        </div>
-      </div>
-        <div class="card card1">
-        <img class="adve" src="http://www.bravotv.com/sites/nbcubravotv/files/styles/blog-post--mobile/public/field_blog_image/2018/02/jet-set-sinking-sailboat.jpg?itok=0ZiCpp3c&timestamp=1518547470" alt="Mountains">
-        <div class="text">
-          <h4 class="adv">Adventure</h4> 
-          <h5>boat</h5>
-        </div>
-      </div>
-        <div class="card card2">
-        <div class="text">
-          <h4 class="fash">Fashion</h4> 
-          <h5>shorts</h5>
-        </div>
-      </div>
-        <div class="card card3">
-          <img class="food" src="https://www.jennieo.com/docs/how-to-season-a-turkey_a_v2_square.jpg">
-        <div class="text">
-          <h4 class="cook">Cooking</h4> 
-          <h5 class="pic">How to season</h5>
-        </div>
-      </div>
-        <div class="card card1">
-        <img class="adve" src="https://shorelinebeachservices.com/wp-content/uploads/2016/04/Beach2131.jpg" alt="Mountains">
-        <div class="text">
-          <h4 class="adv">Adventure</h4> 
-          <h5>Shorline Adventures</h5>
-        </div>
-      </div>
-        <div class="card card2">
-        <div class="text">
-          <h4 class="fash">Fashion</h4> 
-          <h5>sandals</h5>
-        </div>
-      </div>
-        <div class="card card3">
-          <img class="food" src="https://d3cizcpymoenau.cloudfront.net/images/33382/SFS_oven_fried_bacon_bw_014.jpg">
-        <div class="text">
-          <h4 class="cook">Cooking</h4> 
-          <h5 class="pic">Morning Food!</h5>
-        </div>
-      </div>
-      </div>
-      
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
+  <!-- <section>
+      <div class="blog-card">
+      <div class="meta">
+        <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+        <ul class="details">
+          <li class="author"><a href="#">John Doe</a></li>
+          <li class="date">Aug. 24, 2015</li>
+          <li class="tags">
+            <ul>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+            </ul>
           </li>
         </ul>
-      </nav>
-    </section>
+      </div>
+      <div class="description">
+        <h1>Learning to Code</h1>
+        <h2>Opening a door to the future</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+        <p class="read-more">
+          <a href="#">Read More</a>
+        </p>
+      </div>
+    </div>
+    <!-- <div class="blog-card alt">
+      <div class="meta">
+        <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+        <ul class="details">
+          <li class="author"><a href="#">Jane Doe</a></li>
+          <li class="date">July. 15, 2015</li>
+          <li class="tags">
+            <ul>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="description">
+        <h1>Mastering the Language</h1>
+        <h2>Java is not the same as JavaScript</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+        <p class="read-more">
+          <a href="#">Read More</a>
+        </p>
+      </div>
+    </div> --
+  </section> -->
+  <!-- 
+  <section class="grid">
+    <div class="site__wrapper">
+      <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="https://unsplash.it/400/608?image=123" alt="">
 
-  
-<br>
-    <footer>
-      <!-- footer section // no style guide in html -->
-      <div class="footer__container">
-        <div class="social__media">
-              <div class="row align-items-center" id="flex">
-                <div class="col-sm-3" id="name">
-                  <a href="#home" id="footer__logo">&lt;/C4&gt;</a>
+              <div class="card__overlay card__overlay--indigo">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <li><a href="#0"><i class="fa fa-tag"></i> Html5/Css3</a></li>
+                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 min ago</a></li>
+                  </ul>
+
+                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+                  <ul class="card__meta card__meta--last">
+                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                  </ul>
                 </div>
-                <div class="col-4" id="footer_links">
-                  <div>
-                    <ul class="footer_nav">
-                      <li class="footer__item">
-                        <a href="#home" class="footer__links" id="home-page"
-                          ><b>About</b></a
-                        >
-                      </li>
-                      <li class="footer__item">
-                        <a href="blog.html" class="footer__links" id="home-page"
-                          ><b>Blog</b></a
-                        >
-                      </li>
-                      <li class="footer__item">
-                        <a href="blog.html" class="footer__links" id="home-page"
-                          ><b>Contact</b></a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="description overflow-hidden text-center">
-                    <hr />
-                    Designed by Ethan Kupka @ 2023
-                  </div>
-                </div>
-                <div class="col-5" id="contact_email">
-                  <div class="email_text">JOIN<span> our newsletter</span></div>
-                  <div>
-                    <form name="google-sheet">
-                      <div class="input-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Enter Cornell College Email"  required
-                          aria-label="Enter Cornell College Email"
-                          aria-describedby="button-addon2"
-                        />
-                        <button class="button1" type="Submit"><span>Join</span></button>
-                      </div>
-                    </form>
-                    <span id="msg"></span>
-                  </div>
-                
               </div>
             </div>
+          </div>
+      </div>
+
+      <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="https://unsplash.it/400/300?image=100" alt="">
+
+              <div class="card__overlay card__overlay--blue">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <li><a href="#0"><i class="fa fa-tag"></i> UI/UX</a></li>
+                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                  </ul>
+
+                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+                  <ul class="card__meta card__meta--last">
+                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="https://unsplash.it/400/300?image=200" alt="">
+
+              <div class="card__overlay card__overlay--indigo">
+                <div class="card__overlay-content">
+                <ul class="card__meta">
+                    <li><a href="#0"><i class="fa fa-tag"></i> UI/UX</a></li>
+                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                  </ul>
+
+                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+                  <ul class="card__meta card__meta--last">
+                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                  </ul>    
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="https://unsplash.it/400/300?image=300" alt="">
+
+              <div class="card__overlay card__overlay--indigo">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
+                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                  </ul>
+
+                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+                  <ul class="card__meta card__meta--last">
+                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                  </ul>   
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="https://unsplash.it/400/300?image=400" alt="">
+
+              <div class="card__overlay card__overlay--blue">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
+                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                  </ul>
+
+                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+                  <ul class="card__meta card__meta--last">
+                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                  </ul>   
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>    
+
+      
+      <div class="grid">
+        <div class="card">
+          <div class="card__image">
+            <img src="https://unsplash.it/400/300?image=400" alt="">
+
+            <div class="card__overlay card__overlay--blue">
+              <div class="card__overlay-content">
+                <ul class="card__meta">
+                  <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
+                  <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                </ul>
+
+                <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+                <ul class="card__meta card__meta--last">
+                  <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                  <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                </ul>   
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>  
+      
+      <div class="grid">
+        <div class="card">
+          <div class="card__image">
+            <img src="https://unsplash.it/400/300?image=400" alt="">
+
+            <div class="card__overlay card__overlay--blue">
+              <div class="card__overlay-content">
+                <ul class="card__meta">
+                  <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
+                  <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+                </ul>
+
+                <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+                <ul class="card__meta card__meta--last">
+                  <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                  <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                </ul>   
+              </div>
+            </div>
+          </div>
+        </div>
+    </div> 
+
+    <div class="grid">
+      <div class="card">
+        <div class="card__image">
+          <img src="https://unsplash.it/400/608?image=123" alt="">
+
+          <div class="card__overlay card__overlay--indigo">
+            <div class="card__overlay-content">
+              <ul class="card__meta">
+                <li><a href="#0"><i class="fa fa-tag"></i> Html5/Css3</a></li>
+                <li><a href="#0"><i class="fa fa-clock-o"></i> 2 min ago</a></li>
+              </ul>
+
+              <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+              <ul class="card__meta card__meta--last">
+                <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+  </div>
+  
+      <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="https://unsplash.it/400/608?image=123" alt="">
 
-     <!-- BootStrap JS -->
-    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Personal JS -->
-    <script src="practice.js"></script>
-  </body>
+              <div class="card__overlay card__overlay--indigo">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <li><a href="#0"><i class="fa fa-tag"></i> Html5/Css3</a></li>
+                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 min ago</a></li>
+                  </ul>
+
+                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+                  <ul class="card__meta card__meta--last">
+                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+
+
+    
+    <div class="grid">
+      <div class="card">
+        <div class="card__image">
+          <img src="https://unsplash.it/400/300?image=400" alt="">
+
+          <div class="card__overlay card__overlay--blue">
+            <div class="card__overlay-content">
+              <ul class="card__meta">
+                <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
+                <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+              </ul>
+
+              <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+              <ul class="card__meta card__meta--last">
+                <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+                <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+              </ul>   
+            </div>
+          </div>
+        </div>
+      </div>
+  </div> 
+
+
+  
+  <div class="grid">
+    <div class="card">
+      <div class="card__image">
+        <img src="https://unsplash.it/400/300?image=400" alt="">
+
+        <div class="card__overlay card__overlay--blue">
+          <div class="card__overlay-content">
+            <ul class="card__meta">
+              <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
+              <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
+            </ul>
+
+            <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
+
+            <ul class="card__meta card__meta--last">
+              <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
+              <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+            </ul>   
+          </div>
+        </div>
+      </div>
+    </div>
+</div> 
+
+      <div class="site__info">
+        <p>Placeholder images are served from <a target="_blank" href="https://unsplash.it">www.unsplash.it</a></p>
+        <p>Handcrafted by <a target="_blank" href="https://mithicher.github.io">Mithicher</a>. Tweet me on <a target="_blank" href="https://twitter.com/mithicher">Twitter</a></p>
+      </div>
+</div><!-- @end site__wrapper --
+  </section> -->
+
+
+  <Section class="latest_news">
+    <style>
+      .latest_news {
+        background: linear-gradient(to bottom right, #6441A5, #202020);
+      }
+
+      #monthly {
+        background-color: #141414;
+      }
+
+      #weekly {
+        background-color: #141414;
+      }
+
+      #news {
+        color: #ffffff;
+      }
+    </style>
+    <div class="p-2 p-md-5 mb-4 rounded">
+      <div class="col-md-12 px-0">
+        <h1 class="display-4 fst-italic">The Latest News!</h1>
+        <div class="container marketing">
+          <!-- <hr class="top_divider" /> -->
+          <br />
+          <div class="row align-items-md-stretch">
+            <div class="col-md-6 p-3">
+              <div class="h-100 p-5 rounded-3" id="weekly">
+                <h2 class="meet_h2">Weekly</h2>
+                <br />
+                <p><span id="news">When? 1st & 3rd Monday of every block </span></p>
+
+                <br />
+                <a class="btn btn-lg" href="contact.html">Get in the loop</a>
+              </div>
+            </div>
+            <br />
+            <div class="col-md-6 p-3">
+              <div class="h-100 p-5 rounded-3" id="monthly">
+                <h2 class="meet_h2">Monthly</h2>
+                <br />
+                <p><span id="news">When? 1st & 3rd Monday of every block </span></p>
+                <br />
+                <a class="btn btn-lg" href="contact.html">Get in the loop</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p> -->
+      </div>
+    </div>
+  </Section>
+
+  <br />
+
+  <Section class="recent_blog">
+    <style>
+      .recent_blog {
+        background: linear-gradient(to bottom left, #6441A5, #202020);
+        padding: 1rem 10rem 1rem 10rem;
+      }
+
+      #monthly {
+        background-color: #141414;
+      }
+
+      #weekly {
+        background-color: #141414;
+      }
+
+      #news {
+        color: #ffffff;
+      }
+    </style>
+    <br>
+    <div class="blog-card">
+      <div class="meta">
+        <div class="photo"
+          style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+        <ul class="details">
+          <li class="author"><a href="#">John Doe</a></li>
+          <li class="date">Aug. 24, 2015</li>
+          <li class="tags">
+            <ul>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="description">
+        <h1>Learning to Code</h1>
+        <h2>Opening a door to the future</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+          praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+        <p class="read-more">
+          <a href="#">Read More</a>
+        </p>
+      </div>
+    </div>
+    <div class="blog-card alt">
+      <div class="meta">
+        <div class="photo"
+          style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+        <ul class="details">
+          <li class="author"><a href="#">Jane Doe</a></li>
+          <li class="date">July. 15, 2015</li>
+          <li class="tags">
+            <ul>
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="description">
+        <h1>Mastering the Language</h1>
+        <h2>Java is not the same as JavaScript</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+          praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+        <p class="read-more">
+          <a href="#">Read More</a>
+        </p>
+      </div>
+    </div>
+    <br>
+    <!-- <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p> -->
+    </div>
+    </div>
+  </Section>
+
+  
+  <section class="blog_feed">
+    <style>
+      .blog_feed {
+        margin: 2rem 5rem 0 5rem;
+      }
+
+      .buttons:hover{
+        background: #6441A5;
+      }
+
+      .button_theme{
+        justify-content: space-evenly;
+        display: flex;
+      }
+    </style>
+    <div class="p-2 p-md-5 mb-4 rounded">
+      <div class="col-md-12 px-0">
+        <h1 class="display-4 fst-italic">Our Community Blogs</h1>
+        <div class="container marketing">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 mb-4 ">
+                <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()"
+                  placeholder="Search for titles..">
+              </div>
+            </div>
+
+            <div class="button_theme" id="myBtnContainer">
+              <button class="btn" onclick="clearAll('all')"> Show all</button>
+              <button class="btn" onclick="filter('tech')"> tech</button>
+              <button class="btn" onclick="filter('World')"> world</button>
+              <button class="btn" onclick="filter('fruits')"> Fruits</button>
+              <button class="btn" onclick="filter('colors')"> Colors</button>
+            </div>
+          <br/>
+
+          <script>
+            var filter = (filter) => {
+              const cards = document.getElementsByClassName("post");
+              for (let i = 0; i < cards.length; i++) {
+                  let title = cards[i].querySelector(".post .theme");
+                  if (title.innerText.indexOf(filter) > -1) {
+                      cards[i].classList.remove("d-none")
+                  } else {
+                      cards[i].classList.add("d-none")
+                  }
+              }
+            }
+            
+            var clearAll = () => {
+              cards = document.getElementsByClassName("post")
+              for (i = 0; i < cards.length; i++) {
+                  cards[i].classList.remove("d-none")
+              }
+            }
+          </script>
+<!-- 
+            <div id="myItems">
+              <div class="col-sm-6 mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="#">Card One</a></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some text.</p>
+                    
+                  </div>
+
+                </div>
+              </div> -->
+              <div id="myItems">
+                <div class="row mb-2">
+                  <div class="post col-md-6" id="">
+                    <!-- <h5 class="card-title"><a href="#">Card tne</a></h5> -->
+                    <div
+                      class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                      <div class="post col p-4 d-flex flex-column position-static">
+                        
+                        <h3 class="card-title mb-0">o</h3>
+                        
+                        <div class="theme d-inline-block mb-2 text-primary">World</div>
+                     
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
+                          to additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                      </div>
+                      <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                          role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                          focusable="false">
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em">Thumbnail</text>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="post col-md-6" id="">
+                    <!-- <h5 class="card-title"><a href="#">Card tne</a></h5> -->
+                    <div
+                      class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                      <div class="post col p-4 d-flex flex-column position-static">
+                        
+                        <h3 class="card-title mb-0">three</h3>
+                        <div class="theme d-inline-block mb-2 text-primary">tech</div>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
+                          to additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                      </div>
+                      <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                          role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                          focusable="false">
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em">Thumbnail</text>
+                        </svg>
+                    
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="post col-md-6" id="">
+                    <div
+                      class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                      <div class="post col p-4 d-flex flex-column position-static">
+                        
+                        <h3 class="card-title mb-0">opp</h3>
+                        
+                        <div class="theme d-inline-block mb-2 text-primary">World</div>
+                     
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
+                          to additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                      </div>
+                      <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                          role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                          focusable="false">
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em">Thumbnail</text>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="post col-md-6" id="">
+                    <div
+                      class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                      <div class="post col p-4 d-flex flex-column position-static">
+                        
+                        <h3 class="card-title mb-0">four</h3>
+                        <div class="theme d-inline-block mb-2 text-primary">tech</div>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
+                          to additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                      </div>
+                      <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                          role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                          focusable="false">
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em">Thumbnail</text>
+                        </svg>
+                    
+                      </div>
+                    </div>
+                  </div>
+
+              </div> <!-- End of Blog list -->
+
+              <!-- <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="blog.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="blogPost.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul> -->
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  
+
+
+  <footer>
+    <!-- footer section // no style guide in html -->
+    <div class="footer__container">
+      <div class="social__media">
+        <div class="row align-items-center" id="flex">
+          <div class="col-sm-3" id="name">
+            <a href="#home" id="footer__logo">&lt;/C4&gt;</a>
+          </div>
+          <div class="col-4" id="footer_links">
+            <div>
+              <ul class="footer_nav">
+                <li class="footer__item">
+                  <a href="#home" class="footer__links" id="home-page"><b>About</b></a>
+                </li>
+                <li class="footer__item">
+                  <a href="blog.html" class="footer__links" id="home-page"><b>Blog</b></a>
+                </li>
+                <li class="footer__item">
+                  <a href="blog.html" class="footer__links" id="home-page"><b>Contact</b></a>
+                </li>
+              </ul>
+            </div>
+            <div class="description overflow-hidden text-center">
+              <hr />
+              Designed by Ethan Kupka @ 2023
+            </div>
+          </div>
+          <div class="col-5" id="contact_email">
+            <div class="email_text">JOIN<span> our newsletter</span></div>
+            <div>
+              <form name="google-sheet-email">
+                <div class="input-group">
+                  <input type="email" name="Email" class="form-control" placeholder="Enter Cornell College Email"
+                    required aria-label="Enter Cornell College Email" aria-describedby="button-addon2" />
+                  <button class="button1" type="submit"><span>Join</span></button>
+                </div>
+              </form>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BootStrap JS -->
+  <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <!-- Personal JS -->
+  <script src="practice.js"></script>
+</body>
+
 </html>

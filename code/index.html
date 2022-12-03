@@ -7,21 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home-Page</title>
-
+  
   <!-- BootStrap style sheets -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 
   <!-- Personal style sheets -->
   <link href="styles/practice.css" rel="stylesheet" />
-  <link href="styles/custom.css" rel="stylesheet" />
+  <!-- <link href="styles/personal.css" rel="stylesheet" /> -->
 </head>
 
 
 <body>
-  <style>
+  <!-- <style>
     @import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap");
-  </style>
+  </style> -->
 
   <nav class="navbar">
     <!-- navbar section // no style guide in html-->
@@ -58,7 +58,7 @@
     <style>
       /* Style for welcome vid */
       .intro_container {
-        /* background-color: #f11515; */
+        background: #141414;
         height: 45rem;
         position: relative;
         z-index: 0;
@@ -85,13 +85,12 @@
         font-size: 3rem;
         letter-spacing: 0.5rem;
         overflow: hidden;
-        color: white;
+        color: #fff;
         text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
       }
 
       .intro_text p span.typed-text {
         font-weight: normal;
-        
       }
 
       .intro_text p span.cursor {
@@ -107,12 +106,12 @@
 
       @keyframes blink {
         0% {
-          background-color: white;
+          background-color: #fff;
           text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
         }
 
         49% {
-          background-color: white;
+          background-color: #fff;
           text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
         }
 
@@ -125,16 +124,13 @@
         }
 
         100% {
-          background-color: white;
+          background-color: #fff;
           text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
         }
       }
     </style>
-
     <video id="background-video" autoplay loop muted>
-      <!-- <source src="images/sbTyping.mp4" type="video/mp4" /> -->
-      <source src="images/sideTyping.mp4" type="video/mp4" />
-      <!-- https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/8564974cc42904a8cdc3e255a005717e.mp4 -->
+      <source src="images/sbTyping.mp4" type="video/mp4" />
     </video>
     <div class="intro_text">
       <p>><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
@@ -143,128 +139,153 @@
 
   <section class="about">
     <!-- about section // style in html about section-->
+    <style>
+      .text-muted {
+        color: var(--bs-link-hover-color) !important;
+      }
+
+      .about {
+        background: #141414 !important;
+        padding: 5rem 0 8rem 0;
+      }
+
+      .lead span{
+        color:#fff;
+      }
+    
+      .responsive {
+        height: 30rem;
+        width: 100%;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        object-fit: cover;
+      }
+    </style>
     <div class="container marketing">
-      <hr class="featurette-divider" />
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading fw-normal lh-1">
             Who are we?
-            <span class="text-muted"><br />A Computer Science Club</span>
+            <span class="text-muted"><br/>A Computer Science Club</span>
           </h2>
-          <br/>
+          <br />
           <p class="lead">
-            And yes, this is the last block of representative placeholder
-            content. Again, not really intended to be actually read, simply
-            here to give you a better view of what this would look like with
-            some actual content. Your content.
+            We are the Cornell College computer science club. <span> We strive to hone our skills and create </span>a strong friendly
+            environment. We host fun events like a annual hackathon, server tour, and movie nights! We want to build a community to
+            hance our computer science skills where you can present your latest project and get healthy feed back!
           </p>
-          <br/>
+          <br />
         </div>
         <div class="col-md-5">
-
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" data="happy.svg" xmlns="http://www.w3.org/2000/svg" role="img"
-            aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-
-            <title>Placeholder</title>
-
-            <rect width="100%" height="100%" fill="#eee" />
-            <text x="50%" y="50%" fill="#aaa" dy=".3em"> </text>
-            <image href="images/background.png"/>
-          </svg>
+          <img src="images/csHero.jpg" alt="Nature" class="responsive">
         </div>
       </div>
-
-      <hr class="featurette-divider" />
     </div>
+    <div class="skew-cc"></div>
   </section>
-
+  
   <section class="additional_info">
     <!-- additional_info section // style in html additional_info section-->
+    <style>
+      /* Goals and Meeting ------------------------------------------------------------------- */
+      .accordion {
+        /*--bs-accordion-btn-active-icon:red;*/
+        --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(149, 142, 153, 0.25) !important;
+        --bs-accordion-active-color: #fff;
+        --bs-accordion-active-bg: #888889 !important;
+        --bs-accordion-bg:#ebe6e6;
+        --bs-accordion-border-color: #141414;
+      }
+
+      .additional_info {
+        background: linear-gradient(#6441A5 10%, #202020 90%);
+        padding: 5rem 0 8rem 0;
+      }
+
+      #meeting, .p{
+        background-color: #141414;
+        color: #ebe6e6;
+        font-size: 1.15rem;
+      }
+      
+      #about{
+        color: #a861ff;
+        font-size: 1.10rem;
+        font-style: italic;
+      }
+
+      #goals,
+      .h2 {
+        background-color: #141414;
+        color: #ebe6e6;
+      }
+
+      .btn{
+        align-self: center;
+      }
+    </style>
     <div class="container marketing">
+      <!-- <hr class="top_divider" /> -->
       <div class="row align-items-md-stretch">
         <div class="col-md-6 p-3">
-          <div class="h-100 p-5 bs-gray border rounded-3">
-            <h2>Change the background</h2>
-            <br/>
-            <p>
-              Swap the background-color utility and add a `.text-*` color
-              utility to mix up the jumbotron look. Then, mix and match with
-              additional component themes and more.
-            </p>
-            <a class="btn btn-lg btn-primary" href="#">Read More</a>
-              
+          <div class="h-100 p-5 rounded-3" id="meeting">
+            <h2 class="meet_h2">When Do We Meet?</h2>
+            <br />
+            <p><span id="about">When?</span> 1st & 3rd Monday of every block</p>
+            <p><span id="about">Where?</span> 218 West Science Hall</p>
+            <p><span id="about">Time?</span> 3:30pm - 4:30pm</p>
+            <br />
+            <a class="btn btn-lg" href="contact.html">Get in the loop</a>
           </div>
         </div>
-        <br/>
+        <br />
         <div class="col-md-6 p-3">
-          <div class="h-100 p-5 bs-gray border rounded-3">
+          <div class="h-100 p-5 rounded-3" id="goals">
             <div class="accordion" id="accordionExample">
               <h2>Goals</h2>
               <br />
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Career
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong>
-                    It is shown by default, until the collapse plugin adds the
-                    appropriate classes that we use to style each element.
-                    These classes control the overall appearance, as well as
-                    the showing and hiding via CSS transitions. You can modify
-                    any of this with custom CSS or overriding our default
-                    variables. It's also worth noting that just about any HTML
-                    can go within the <code>.accordion-body</code>, though the
-                    transition does limit overflow.
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Career
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                      the <code>.career</code> class. This is the first item's accordion body.</div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Community
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong>
-                    It is hidden by default, until the collapse plugin adds
-                    the appropriate classes that we use to style each element.
-                    These classes control the overall appearance, as well as
-                    the showing and hiding via CSS transitions. You can modify
-                    any of this with custom CSS or overriding our default
-                    variables. It's also worth noting that just about any HTML
-                    can go within the <code>.accordion-body</code>, though the
-                    transition does limit overflow.
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Community
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                      the <code>.community</code> class. This is the second item's accordion body. Let's imagine
+                      this being filled with some actual content.</div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Fun
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong>
-                    It is hidden by default, until the collapse plugin adds
-                    the appropriate classes that we use to style each element.
-                    These classes control the overall appearance, as well as
-                    the showing and hiding via CSS transitions. You can modify
-                    any of this with custom CSS or overriding our default
-                    variables. It's also worth noting that just about any HTML
-                    can go within the <code>.accordion-body</code>, though the
-                    transition does limit overflow.
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Fun
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                      the <code>.fun</code> class. This is the third item's accordion body. Nothing more
+                      exciting happening here in terms of content, but just filling up the space to make it look, at
+                      least at first glance, a bit more representative of how this would look in a real-world
+                      application.</div>
                   </div>
                 </div>
               </div>
@@ -272,14 +293,39 @@
           </div>
         </div>
       </div>
-      <hr class="featurette-divider" />
     </div>
   </section>
 
   <section class="slide_show">
     <!-- slide_show section // style in html slide_show section-->
     <style>
-      
+      .slide_show {
+        background:  var(--clr-bg);
+        padding-bottom: 4rem;
+      }
+
+      /* Since positioning the image, we need to help out the caption */
+      .carousel-caption {
+        bottom: 8rem;
+        z-index: 10;
+      }
+
+      #slide_text h1,
+      #slide_text p {
+        text-shadow: 1px 1px 1px #000000, 0 0 1em rgb(0, 0, 0), 0 0 0.9em rgb(155, 48, 255);
+      }
+
+      /* Declare heights because of positioning of img element */
+      .carousel-item {
+        height: 32rem;
+      }
+
+      #slide {
+        width: 100%;
+        object-fit: fill;
+        background-size: 100%;
+      }/* Prob with responsive */
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -294,63 +340,12 @@
         }
       }
 
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, 0.1);
-        border: solid rgba(0, 0, 0, 0.15);
-        border-width: 1px 0;
-        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        
-      }
-
-      .carousel-control-next-icon, .carousel-control-prev-icon, .visually-hidden {
-        text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
-        color: #000000;
-        background-color: #000000;
-      }
-
-      .container h1, p{
-        text-shadow: 0 0 0.02em rgb(0, 0, 0), 0 0 0.1em black;
-      }
-
+     /* @media (max-width: 768px) {
+        .carousel-item {
+          height: 22rem;
+        }/* Prob with responsive 
+      }*/
     </style>
-
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -363,18 +358,16 @@
           <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="#777" />
-            <image href="images/background.png"/>
+            <image href="images/blog.jpg" id="slide"/>
           </svg>
 
-          <div class="container">
+          <div class="container" id="slide_text">
             <div class="carousel-caption text-start">
-              <h1>Example headline.</h1>
+              <h1>What do you want?</h1>
               <p>
-                Some representative placeholder content for the first slide of
-                the carousel.
+                C4 is changing and we want to hear from you! Got any ideas?
               </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">Read More</a>
+                <p><a class="btn btn-lg" href="contact.html">Suggestions?</a>
               </p>
             </div>
           </div>
@@ -383,18 +376,18 @@
           <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="#777" />
-            <image href="images/background.png"/>
+            <image href="images/hack.jpg" id="slide"/>
             <!-- <image href="images/fair.jpg" height="100%" width="100%" object-fit="cover"/> -->
           </svg>
 
-          <div class="container">
+          <div class="container" id="slide_text">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
+              <h1>First meeting</h1>
               <p>
-                Some representative placeholder content for the second slide
-                of the carousel.
+                C4 had the chance to meet its new 2022 members!
               </p>
-              <p><a class="btn btn-lg btn-primary" href="#">Suggestions?</a></p>
+              <p>
+              <p><a class="btn btn-lg" href="blog.html">Read More</a></p>
             </div>
           </div>
         </div>
@@ -402,18 +395,17 @@
           <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
             <rect width="100%" height="100%" fill="#777" />
-            <image href="images/background.png"/>
+            <image href="images/changing.jpg" id="slide"/>
           </svg>
 
-          <div class="container">
+          <div class="container" id="slide_text">
             <div class="carousel-caption text-end">
-              <h1>One more for good measure.</h1>
+              <h1>Up and coming event!</h1>
               <p>
-                Some representative placeholder content for the third slide of
-                this carousel.
+                We plan to host a Hackathon during the second semester of 2023 year!
               </p>
               <p>
-                <a class="btn btn-lg btn-primary" href="#">Read More</a>
+                <a class="btn btn-lg" href="blog.html">Read More</a>
               </p>
             </div>
           </div>
@@ -448,7 +440,7 @@
                   <a href="blog.html" class="footer__links" id="home-page"><b>Blog</b></a>
                 </li>
                 <li class="footer__item">
-                  <a href="contact.html" class="footer__links" id="home-page"><b>Contact</b></a>
+                  <a href="blog.html" class="footer__links" id="home-page"><b>Contact</b></a>
                 </li>
               </ul>
             </div>
@@ -460,11 +452,11 @@
           <div class="col-5" id="contact_email">
             <div class="email_text">JOIN<span> our newsletter</span></div>
             <div>
-              <form name="google-sheet">
+              <form name="google-sheet-email">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Enter Cornell College Email" required
+                  <input type="email" name= "Email" class="form-control" placeholder="Enter Cornell College Email" required
                     aria-label="Enter Cornell College Email" aria-describedby="button-addon2" />
-                  <button class="button1" type="Submit"><span>Join</span></button>
+                  <button class="button1" type="submit"><span>Join</span></button>
                 </div>
               </form>
               <span id="msg"></span>
@@ -474,7 +466,7 @@
       </div>
     </div>
   </footer>
- 
+
   <!-- BootStrap JS -->
   <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -482,7 +474,7 @@
     crossorigin="anonymous"></script>
   <!-- Personal JS -->
   <script src="practice.js"></script>
- 
+
 </body>
 
 </html>

@@ -41,12 +41,22 @@
         </div>
     </div>
 
+    <form name="google-sheet1">
+    <div class="formGroupp">
+        <label for="emaill" class="form-label">email</label>
+        <input type="emaill" id="emaill" name= "Email" class="form-control" placeholder="Enter your email" required>
+    </div>
+    <div>
+        <button class="btnn" type="submit">Send message!</button>
+    </div>
+</form>
       <!-- enters the stylesheet -->
 
       <!-- Having a problem with allowing access to cornell college emails only -->
   <script> 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyYbtbjvILClqI0Fj13Pzn0H-pUN0r8FGkod-e5fHVWviCfox9tyA1UPQDOPWrZmPdrCg/exec'
-    const form = document.forms['google-sheet' ]
+    const form = document.forms['google-sheet', 'google-sheet1']
+  
   
     form.addEventListener('submit', e => {
       e.preventDefault()
@@ -54,6 +64,13 @@
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
     })
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
   </script>
 
   

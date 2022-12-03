@@ -1,11 +1,7 @@
+/* NavBar Responsive ------------------------------------------------------------------- */
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
 const navLogo  = document.querySelector('#navbar__logo')
-
-// menu.addEventListener('click', function() {
-//   menu.classList.toggle('is-active');
-//   menuLinks.classList.toggle('active');
-// });
 
 const mobileMenu = () => {
   menu.classList.toggle('is-active');
@@ -26,19 +22,17 @@ const hideMobileMenu = () => {
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
 
-
-// --------------------------------------Footer Email
-
-
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyRRDkkcEUb1fRxl-n4dqJ1OZ9pDgrr7H5XV5ld0_2ygsKEmdaQm9uf35w-JQ8YhvrX/exec'
-        const form = document.forms['google-sheet']
-        const msg = document.getElementById('msg')
+/* Email Form Submit ------------------------------------------------------------------- */
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwqM16c8PIIzfct6--VJazNG7WISJHfrLlfwOg-1FTi5L0UNdcw1pxhtW7cPsA32WpS/exec'
+const form = document.forms['google-sheet-email']
+const msg = document.getElementById('msg')
       
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Thank you for sub!"
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+                console.log('Success!', response)
+                msg.innerHTML = "Thank you for sub"
                 setTimeout(function(){
                 msg.innerHTML = ""},
                 5000)
@@ -46,17 +40,25 @@ navLogo.addEventListener('click', hideMobileMenu);
             })
             .catch(error => console.error('Error!', error.message))
           })
-      
-// ------------------------------------------------Blog
-// $('.container').isotope({
-//   itemSelector: '.card',
-//   layoutMode: 'masonry',
-//   sortBy : 'random'
-// });
+         
+/* Blog Search ------------------------------------------------------------------- */
+          function myFunction() {
+            var input, filter, cards, cardContainer, title, i;
+            input = document.getElementById("myFilter");
+            filter = input.value.toUpperCase();
+            cardContainer = document.getElementById("myProducts");
+            cards = cardContainer.getElementsByClassName("card");
+            for (i = 0; i < cards.length; i++) {
+              title = cards[i].querySelector(".card-title");
+              if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+              } else {
+                cards[i].style.display = "none";
+              }
+            }
+          }
 
-
-// -----------------------------------------------------Text main
-
+/* Home Typing Text ------------------------------------------------------------------- */
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
@@ -98,3 +100,44 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+
+// --------------------
+function myFunction() {
+  var input, filter, cards, cardContainer, h5, title, i;
+  input = document.getElementById("myFilter");
+  filter = input.value.toUpperCase();
+  cardContainer = document.getElementById("myItems");
+  cards = cardContainer.getElementsByClassName("post");
+  for (i = 0; i < cards.length; i++) {
+      title = cards[i].querySelector(".post h3.card-title");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+          cards[i].style.display = "";
+      } else {
+          cards[i].style.display = "none";
+      }
+  }
+}
+
+// -------------------------
+
+
+// --------------------------
+var filter = (filter) => {
+  const cards = document.getElementsByClassName("col-sm-12");
+  for (let i = 0; i < cards.length; i++) {
+      let title = cards[i].querySelector(".card .card-body .card-title");
+      if (title.innerText.indexOf(filter) > -1) {
+          cards[i].classList.remove("d-none")
+      } else {
+          cards[i].classList.add("d-none")
+      }
+  }
+}
+
+var clearAll = () => {
+  cards = document.getElementsByClassName("col-sm-12")
+  for (i = 0; i < cards.length; i++) {
+      cards[i].classList.remove("d-none")
+  }
+}
