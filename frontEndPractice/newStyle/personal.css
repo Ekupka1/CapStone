@@ -1,3 +1,4 @@
+/* Blog Tiles ------------------------------------------------------------------- */
 .blog-card {
   display: flex;
   flex-direction: column;
@@ -10,6 +11,7 @@
   z-index: 0;
   border-width: 1rem;
   border-color: #fff;
+  /* Responsive Blog Tiles ------------------------------------------------------------------- */
 }
 .blog-card a {
   color: inherit;

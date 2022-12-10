@@ -13,15 +13,12 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 
   <!-- Personal style sheets -->
-  <link href="styles/practice.css" rel="stylesheet" />
-  <!-- <link href="custom.scss" rel="stylesheet" /> -->
-  <link href="styles/personal.css" rel="stylesheet" />
-  <!-- <link href="styles/custom.css" rel="stylesheet" type="text/css"> -->
+  <link href="styles/main.css" rel="stylesheet" />
+  <link href="styles/blog.css" rel="stylesheet" />
 </head>
 
 
 <body>
-  <script src="practice.js"></script>
   <!-- <style>@import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap");</style> -->
   <nav class="navbar">
     <!-- navbar section // no style guide in html-->
@@ -53,381 +50,53 @@
     </div>
   </nav>
 
-  <!-- <section>
-      <div class="blog-card">
-      <div class="meta">
-        <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
-        <ul class="details">
-          <li class="author"><a href="#">John Doe</a></li>
-          <li class="date">Aug. 24, 2015</li>
-          <li class="tags">
-            <ul>
-              <li><a href="#">Learn</a></li>
-              <li><a href="#">Code</a></li>
-              <li><a href="#">HTML</a></li>
-              <li><a href="#">CSS</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="description">
-        <h1>Learning to Code</h1>
-        <h2>Opening a door to the future</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-        <p class="read-more">
-          <a href="#">Read More</a>
-        </p>
-      </div>
-    </div>
-    <!-- <div class="blog-card alt">
-      <div class="meta">
-        <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
-        <ul class="details">
-          <li class="author"><a href="#">Jane Doe</a></li>
-          <li class="date">July. 15, 2015</li>
-          <li class="tags">
-            <ul>
-              <li><a href="#">Learn</a></li>
-              <li><a href="#">Code</a></li>
-              <li><a href="#">JavaScript</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="description">
-        <h1>Mastering the Language</h1>
-        <h2>Java is not the same as JavaScript</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-        <p class="read-more">
-          <a href="#">Read More</a>
-        </p>
-      </div>
-    </div> --
-  </section> -->
-  <!-- 
-  <section class="grid">
-    <div class="site__wrapper">
-      <div class="grid">
-          <div class="card">
-            <div class="card__image">
-              <img src="https://unsplash.it/400/608?image=123" alt="">
-
-              <div class="card__overlay card__overlay--indigo">
-                <div class="card__overlay-content">
-                  <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> Html5/Css3</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 min ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-                  <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div class="grid">
-          <div class="card">
-            <div class="card__image">
-              <img src="https://unsplash.it/400/300?image=100" alt="">
-
-              <div class="card__overlay card__overlay--blue">
-                <div class="card__overlay-content">
-                  <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> UI/UX</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-                  <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div class="grid">
-          <div class="card">
-            <div class="card__image">
-              <img src="https://unsplash.it/400/300?image=200" alt="">
-
-              <div class="card__overlay card__overlay--indigo">
-                <div class="card__overlay-content">
-                <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> UI/UX</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-                  <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                  </ul>    
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div class="grid">
-          <div class="card">
-            <div class="card__image">
-              <img src="https://unsplash.it/400/300?image=300" alt="">
-
-              <div class="card__overlay card__overlay--indigo">
-                <div class="card__overlay-content">
-                  <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-                  <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                  </ul>   
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div class="grid">
-          <div class="card">
-            <div class="card__image">
-              <img src="https://unsplash.it/400/300?image=400" alt="">
-
-              <div class="card__overlay card__overlay--blue">
-                <div class="card__overlay-content">
-                  <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-                  <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                  </ul>   
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>    
-
-      
-      <div class="grid">
-        <div class="card">
-          <div class="card__image">
-            <img src="https://unsplash.it/400/300?image=400" alt="">
-
-            <div class="card__overlay card__overlay--blue">
-              <div class="card__overlay-content">
-                <ul class="card__meta">
-                  <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
-                  <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-                </ul>
-
-                <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-                <ul class="card__meta card__meta--last">
-                  <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                  <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                </ul>   
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>  
-      
-      <div class="grid">
-        <div class="card">
-          <div class="card__image">
-            <img src="https://unsplash.it/400/300?image=400" alt="">
-
-            <div class="card__overlay card__overlay--blue">
-              <div class="card__overlay-content">
-                <ul class="card__meta">
-                  <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
-                  <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-                </ul>
-
-                <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-                <ul class="card__meta card__meta--last">
-                  <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                  <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                </ul>   
-              </div>
-            </div>
-          </div>
-        </div>
-    </div> 
-
-    <div class="grid">
-      <div class="card">
-        <div class="card__image">
-          <img src="https://unsplash.it/400/608?image=123" alt="">
-
-          <div class="card__overlay card__overlay--indigo">
-            <div class="card__overlay-content">
-              <ul class="card__meta">
-                <li><a href="#0"><i class="fa fa-tag"></i> Html5/Css3</a></li>
-                <li><a href="#0"><i class="fa fa-clock-o"></i> 2 min ago</a></li>
-              </ul>
-
-              <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-              <ul class="card__meta card__meta--last">
-                <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-  
-      <div class="grid">
-          <div class="card">
-            <div class="card__image">
-              <img src="https://unsplash.it/400/608?image=123" alt="">
-
-              <div class="card__overlay card__overlay--indigo">
-                <div class="card__overlay-content">
-                  <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> Html5/Css3</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 min ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-                  <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-      
-
-
-    
-    <div class="grid">
-      <div class="card">
-        <div class="card__image">
-          <img src="https://unsplash.it/400/300?image=400" alt="">
-
-          <div class="card__overlay card__overlay--blue">
-            <div class="card__overlay-content">
-              <ul class="card__meta">
-                <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
-                <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-              </ul>
-
-              <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-              <ul class="card__meta card__meta--last">
-                <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-              </ul>   
-            </div>
-          </div>
-        </div>
-      </div>
-  </div> 
-
-
-  
-  <div class="grid">
-    <div class="card">
-      <div class="card__image">
-        <img src="https://unsplash.it/400/300?image=400" alt="">
-
-        <div class="card__overlay card__overlay--blue">
-          <div class="card__overlay-content">
-            <ul class="card__meta">
-              <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
-              <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-            </ul>
-
-            <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-            <ul class="card__meta card__meta--last">
-              <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-              <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-            </ul>   
-          </div>
-        </div>
-      </div>
-    </div>
-</div> 
-
-      <div class="site__info">
-        <p>Placeholder images are served from <a target="_blank" href="https://unsplash.it">www.unsplash.it</a></p>
-        <p>Handcrafted by <a target="_blank" href="https://mithicher.github.io">Mithicher</a>. Tweet me on <a target="_blank" href="https://twitter.com/mithicher">Twitter</a></p>
-      </div>
-</div><!-- @end site__wrapper --
-  </section> -->
-
-
-  <Section class="latest_news">
+  <Section class="latest_news" id="home">
+    <!-- latest_news section // style in html latest_news section-->
     <style>
       .latest_news {
         background: linear-gradient(to bottom right, #6441A5, #202020);
       }
 
+      .lnt {
+        color: var(--clr-tdf);
+      }
+
       #monthly {
-        background-color: #141414;
+        background-color: var(--clr-nav);
       }
 
       #weekly {
-        background-color: #141414;
+        background-color: var(--clr-nav);
       }
 
       #news {
-        color: #ffffff;
+        color: var(--clr-tdf);
       }
     </style>
     <div class="p-2 p-md-5 mb-4 rounded">
       <div class="col-md-12 px-0">
-        <h1 class="display-4 fst-italic">The Latest News!</h1>
+        <h1 class="lnt display-4 fst-italic">The Latest News!</h1>
         <div class="container marketing">
           <!-- <hr class="top_divider" /> -->
           <br />
           <div class="row align-items-md-stretch">
             <div class="col-md-6 p-3">
               <div class="h-100 p-5 rounded-3" id="weekly">
-                <h2 class="meet_h2">Weekly</h2>
+                <h2 class="meet_h2">Monthly</h2>
                 <br />
-                <p><span id="news">When? 1st & 3rd Monday of every block </span></p>
-
+                <p><span id="news">We'll be having a return meeting the tuesday of Block 5 3:30PM-4:30PM!</span></p>
                 <br />
-                <a class="btn btn-lg" href="contact.html">Get in the loop</a>
+                <!-- <a class="btn btn-lg" href="contact.html">Get in the loop</a> -->
               </div>
             </div>
             <br />
             <div class="col-md-6 p-3">
               <div class="h-100 p-5 rounded-3" id="monthly">
-                <h2 class="meet_h2">Monthly</h2>
+                <h2 class="meet_h2">Semester</h2>
                 <br />
-                <p><span id="news">When? 1st & 3rd Monday of every block </span></p>
+                <p><span id="news">We plan to host a exciting event with zumba like robots and a hackathon!</span></p>
                 <br />
-                <a class="btn btn-lg" href="contact.html">Get in the loop</a>
+                <!-- <a class="btn btn-lg" href="contact.html">Get in the loop</a> -->
               </div>
             </div>
           </div>
@@ -438,79 +107,63 @@
     </div>
   </Section>
 
-  <br />
+  <br/>
 
   <Section class="recent_blog">
+    <!-- recent_blog section // style in html recent_blog section-->
     <style>
       .recent_blog {
         background: linear-gradient(to bottom left, #6441A5, #202020);
         padding: 1rem 10rem 1rem 10rem;
       }
 
-      #monthly {
-        background-color: #141414;
+      .highlight{
+        color: var(--clr-tdf);
+        justify-content: flex-end;
+      display: flex;
       }
 
-      #weekly {
-        background-color: #141414;
+      .highlightBlog {
+        color: var(--clr-tdf);
       }
 
-      #news {
-        color: #ffffff;
+      .read-more {
+        color: var(--bs-link-hover-color);
+      }
+
+      .author,
+      .date {
+        color: var(--clr-tdf);
       }
     </style>
     <br>
+    <h1 class="highlight display-4 fst-italic">Highlight Blog!</h1>
+    <br/>
     <div class="blog-card">
       <div class="meta">
         <div class="photo"
           style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
         <ul class="details">
-          <li class="author"><a href="#">John Doe</a></li>
-          <li class="date">Aug. 24, 2015</li>
-          <li class="tags">
+          <li class="author">Ethan Kupka</li>
+          <li class="date">December 15, 2022</li>
+          <!-- <li class="tags">
             <ul>
               <li><a href="#">Learn</a></li>
               <li><a href="#">Code</a></li>
               <li><a href="#">HTML</a></li>
               <li><a href="#">CSS</a></li>
             </ul>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="description">
         <h1>Learning to Code</h1>
         <h2>Opening a door to the future</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
+        <p class="highlightBlog"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto
+          obcaecati enim dicta
           praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-        <p class="read-more">
-          <a href="#">Read More</a>
-        </p>
-      </div>
-    </div>
-    <div class="blog-card alt">
-      <div class="meta">
-        <div class="photo"
-          style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
-        <ul class="details">
-          <li class="author"><a href="#">Jane Doe</a></li>
-          <li class="date">July. 15, 2015</li>
-          <li class="tags">
-            <ul>
-              <li><a href="#">Learn</a></li>
-              <li><a href="#">Code</a></li>
-              <li><a href="#">JavaScript</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="description">
-        <h1>Mastering the Language</h1>
-        <h2>Java is not the same as JavaScript</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta
-          praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-        <p class="read-more">
-          <a href="#">Read More</a>
-        </p>
+        <br />
+        <a href="#">Continue reading</a>
       </div>
     </div>
     <br>
@@ -520,208 +173,176 @@
     </div>
   </Section>
 
-  
   <section class="blog_feed">
+     <!-- blog_feed section // style in html blog_feed section-->
     <style>
       .blog_feed {
         margin: 2rem 5rem 0 5rem;
       }
 
-      .buttons:hover{
-        background: #6441A5;
+      .blogtitle{
+        display: flex;
+        justify-content: center;
+        color: var(--clr-tdf);
+        padding-bottom: 1rem;
+        padding-top: 2rem;
       }
 
-      .button_theme{
+      #purpPost{
+        background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(24, 8, 35), rgb(65, 31, 89), rgb(135, 100, 222));
+        color: var(--clr-tdf);
+      }
+
+      .button_theme {
         justify-content: space-evenly;
         display: flex;
       }
-    </style>
-    <div class="p-2 p-md-5 mb-4 rounded">
-      <div class="col-md-12 px-0">
-        <h1 class="display-4 fst-italic">Our Community Blogs</h1>
-        <div class="container marketing">
 
+      #btn_theme {
+        margin: 1rem 0 2rem 0;
+        width: 8rem;
+      }
+
+      .theme,
+      .stretched-link {
+        color: var(--clr-tdf);
+      }
+
+      .card-title {
+        color: var(--clr-tdf);
+        text-shadow: 0 0 0.1em var(--bs-link-hover-color), 0 0 0.2em #571d78;
+      }
+
+      @media (max-width: 62em) {
+        .button_theme {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+
+        #btn_theme {
+          margin: .5rem 0 .5rem 0;
+          width: auto;
+          height: 2rem;
+          padding: .2px;
+        }
+      }
+
+      @media (max-width: 88em) {
+        .d-lg-block {
+          display: none !important;
+        }
+      }
+    </style>
+      <div class="col-md-12 mb-4 px-0">
+        <h1 class="blogtitle display-4 fst-italic">Our Community Blogs</h1>
+        <div class="container marketing">
           <div class="container">
             <div class="row">
-              <div class="col-sm-8 mb-4 ">
+              <div class="col-sm-11 my-4 mx-auto ">
                 <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()"
-                  placeholder="Search for titles..">
+                  placeholder="Search for titles...">
               </div>
             </div>
-
             <div class="button_theme" id="myBtnContainer">
-              <button class="btn" onclick="clearAll('all')"> Show all</button>
-              <button class="btn" onclick="filter('tech')"> tech</button>
-              <button class="btn" onclick="filter('World')"> world</button>
-              <button class="btn" onclick="filter('fruits')"> Fruits</button>
-              <button class="btn" onclick="filter('colors')"> Colors</button>
+              <button class="btn2" id="btn_theme" onclick="clearAll('all')">Show All</button>
+              <button class="btn" id="btn_theme" onclick="filter('Technology')">Technology</button>
+              <button class="btn" id="btn_theme" onclick="filter('Career Experiences')">Career Experiences</button>
+              <button class="btn" id="btn_theme" onclick="filter('Skills')">Skills</button>
+              <button class="btn" id="btn_theme" onclick="filter('Other')">Other</button>
             </div>
-          <br/>
-
-          <script>
-            var filter = (filter) => {
-              const cards = document.getElementsByClassName("post");
-              for (let i = 0; i < cards.length; i++) {
-                  let title = cards[i].querySelector(".post .theme");
-                  if (title.innerText.indexOf(filter) > -1) {
-                      cards[i].classList.remove("d-none")
-                  } else {
-                      cards[i].classList.add("d-none")
-                  }
-              }
-            }
-            
-            var clearAll = () => {
-              cards = document.getElementsByClassName("post")
-              for (i = 0; i < cards.length; i++) {
-                  cards[i].classList.remove("d-none")
-              }
-            }
-          </script>
-<!-- 
+            <br />
             <div id="myItems">
-              <div class="col-sm-6 mb-3">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title"><a href="#">Card One</a></h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some text.</p>
-                    
+              <div class="row mb-2">
+                <div class="post col-md-6 " id=""> <!-- basic card -->
+                  <!-- <h5 class="card-title"><a href="#">Card tne</a></h5> -->
+                  <div
+                    class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="post col p-4 d-flex flex-column position-static">
+                      <h3 class="card-title mb-0">First Blog</h3>
+                      <div class="mb-2 mt-1 text-muted">//: Nov 12, 2022 | <div class="theme d-inline-block mb-2">Skills
+                        </div>
+                      </div>
+                      <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
+                        to additional content.</p>
+                      <a href="blogPosts/blogPostTemp.html" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                      <img src="images/csHero.jpg" width="250" height="250" alt="Nature" focusable="coolStuff"
+                        class="responsive">
+                    </div>
                   </div>
-
                 </div>
-              </div> -->
-              <div id="myItems">
-                <div class="row mb-2">
-                  <div class="post col-md-6" id="">
-                    <!-- <h5 class="card-title"><a href="#">Card tne</a></h5> -->
-                    <div
-                      class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                      <div class="post col p-4 d-flex flex-column position-static">
-                        
-                        <h3 class="card-title mb-0">o</h3>
-                        
-                        <div class="theme d-inline-block mb-2 text-primary">World</div>
-                     
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
-                          to additional content.</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
-                      </div>
-                      <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
-                          role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                          focusable="false">
-                          <title>Placeholder</title>
-                          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                            dy=".3em">Thumbnail</text>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="post col-md-6" id="">
-                    <!-- <h5 class="card-title"><a href="#">Card tne</a></h5> -->
-                    <div
-                      class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                      <div class="post col p-4 d-flex flex-column position-static">
-                        
-                        <h3 class="card-title mb-0">three</h3>
-                        <div class="theme d-inline-block mb-2 text-primary">tech</div>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
-                          to additional content.</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
-                      </div>
-                      <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
-                          role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                          focusable="false">
-                          <title>Placeholder</title>
-                          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                            dy=".3em">Thumbnail</text>
-                        </svg>
-                    
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="post col-md-6" id="">
-                    <div
-                      class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                      <div class="post col p-4 d-flex flex-column position-static">
-                        
-                        <h3 class="card-title mb-0">opp</h3>
-                        
-                        <div class="theme d-inline-block mb-2 text-primary">World</div>
-                     
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
-                          to additional content.</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
+                <div class="post col-md-6 " id=""> <!-- purple card -->
+                  <!-- <h5 class="card-title"><a href="#">Card tne</a></h5> -->
+                  <div
+                    class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" id="purpPost">
+                    <div class="post col p-4 d-flex flex-column position-static">
+                      <h3 class="card-title mb-0">First Blog</h3>
+                      <div class="mb-2 mt-1 text-muted">//: Nov 12, 2022 | <div class="theme d-inline-block mb-2">Skills
+                        </div>
                       </div>
-                      <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
-                          role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                          focusable="false">
-                          <title>Placeholder</title>
-                          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                            dy=".3em">Thumbnail</text>
-                        </svg>
-                      </div>
+                      <p class="card-text mb-auto" id="purpText">This is a wider card with supporting text below as a natural lead-in
+                        to additional content.</p>
+                      <a href="blogPost.html" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                      <img src="images/csHero.jpg" width="250" height="250" alt="Nature" focusable="coolStuff"
+                        class="responsive">
                     </div>
                   </div>
-                  
-                  <div class="post col-md-6" id="">
-                    <div
-                      class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                      <div class="post col p-4 d-flex flex-column position-static">
-                        
-                        <h3 class="card-title mb-0">four</h3>
-                        <div class="theme d-inline-block mb-2 text-primary">tech</div>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
-                          to additional content.</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
-                      </div>
-                      <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
-                          role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                          focusable="false">
-                          <title>Placeholder</title>
-                          <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                            dy=".3em">Thumbnail</text>
-                        </svg>
-                    
-                      </div>
-                    </div>
-                  </div>
+                </div>
 
+                <div class="post col-md-6 " id=""> <!-- purple card -->
+                  <!-- <h5 class="card-title"><a href="#">Card tne</a></h5> -->
+                  <div
+                    class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" id="purpPost">
+                    <div class="post col p-4 d-flex flex-column position-static">
+                      <h3 class="card-title mb-0">First Blog</h3>
+                      <div class="mb-2 mt-1 text-muted">//: Nov 12, 2022 | <div class="theme d-inline-block mb-2">Skills & Technology
+                        </div>
+                      </div>
+                      <p class="card-text mb-auto" id="purpText">This is a wider card with supporting text below as a natural lead-in
+                        to additional content.</p>
+                      <a href="blogPost.html" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                      <img src="images/csHero.jpg" width="250" height="250" alt="Nature" focusable="coolStuff"
+                        class="responsive">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post col-md-6" id="">
+                  <div
+                    class="post row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="post col p-4 d-flex flex-column position-static">
+                      <h3 class="card-title mb-0">Fourth</h3>
+                      <div class="mb-2 mt-1 text-muted">//: Nov 12, 2022 | <div class="theme d-inline-block mb-2">Other
+                      </div>
+                    </div>
+                      <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
+                        to additional content.</p>
+                      <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                      <img src="images/csHero.jpg" width="250" height="250" alt="Nature" focusable="coolStuff"
+                        class="responsive">
+                      <!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                        role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                        focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                          dy=".3em">Thumbnail</text>
+                      </svg> -->
+                    </div>
+                  </div>
+                </div>
               </div> <!-- End of Blog list -->
-
-              <!-- <ul class="pagination justify-content-center">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="blog.html">1</a></li>
-                <li class="page-item"><a class="page-link" href="blogPost.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul> -->
+            </div>
           </div>
         </div>
-      </div>
   </section>
-
-
-  
-
 
   <footer>
     <!-- footer section // no style guide in html -->
@@ -735,13 +356,13 @@
             <div>
               <ul class="footer_nav">
                 <li class="footer__item">
-                  <a href="#home" class="footer__links" id="home-page"><b>About</b></a>
+                  <a href="index.html" class="footer__links" id="home-page"><b>About</b></a>
                 </li>
                 <li class="footer__item">
-                  <a href="blog.html" class="footer__links" id="home-page"><b>Blog</b></a>
+                  <a href="#home" class="footer__links" id="home-page"><b>Blog</b></a>
                 </li>
                 <li class="footer__item">
-                  <a href="blog.html" class="footer__links" id="home-page"><b>Contact</b></a>
+                  <a href="contact.html" class="footer__links" id="home-page"><b>Contact</b></a>
                 </li>
               </ul>
             </div>
@@ -769,12 +390,32 @@
   </footer>
 
   <!-- BootStrap JS -->
-  <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
   <!-- Personal JS -->
-  <script src="practice.js"></script>
+  <script src="main.js"></script>
+ <!-- Button Sort for blog_feed JS -->
+  <script>
+    var filter = (filter) => {
+      const cards = document.getElementsByClassName("post");
+      for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].querySelector(".post .theme");
+        if (title.innerText.indexOf(filter) > -1) {
+          cards[i].classList.remove("d-none")
+        } else {
+          cards[i].classList.add("d-none")
+        }
+      }
+    }
+
+    var clearAll = () => {
+      cards = document.getElementsByClassName("post")
+      for (i = 0; i < cards.length; i++) {
+        cards[i].classList.remove("d-none")
+      }
+    }
+  </script>
 </body>
 
 </html>

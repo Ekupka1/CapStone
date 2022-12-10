@@ -9,19 +9,17 @@
   <title>Contact-Page</title>
 
   <!-- BootStrap style sheets -->
-  <!-- <link href="sass/main.css" rel="stylesheet"/> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 
 
   <!-- Personal style sheets -->
-  <link href="styles/practice.css" rel="stylesheet" />
+  <link href="styles/main.css" rel="stylesheet" />
+  <!-- <link href="styles/blog.css" rel="stylesheet" /> -->
 </head>
 
 
 <body>
-  <!-- <style>@import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap");</style> -->
-
   <nav class="navbar">
     <!-- navbar section // no style guide in html-->
     <div class="navbar__container">
@@ -116,6 +114,7 @@
   <div class="skew-c"></div>
 
   <section class="contacts">
+    <!-- contacts section // style in html contacts section-->
     <style>
       .contacts {
         background: #141414 !important;
@@ -142,7 +141,6 @@
         width: auto;
         justify-content: center;
         align-items: center;
-
       }
 
       /* Remove extra left and right margins, due to padding in columns */
@@ -212,7 +210,6 @@
       #discord_btn:hover {
         background-color: #928dab;
       }
-
       /* Responsive columns - one column layout (vertical) on small screens */
       @media screen and (max-width: 600px) {
         .columns {
@@ -247,6 +244,7 @@
   </section>
 
   <section class="members">
+    <!-- member section // style in html members section-->
     <style>
       .members {
         background: linear-gradient(#141414 10%, #202020 90%);
@@ -279,6 +277,11 @@
       .fw-normal{
         color:#ffffff
       }
+
+      /*
+      .col-lg-3{
+        text-align: center;
+      } /* For 4 members */
     </style>
     <div class="container marketing">
       <!-- Three columns of text below the carousel -->
@@ -354,7 +357,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="col-lg-4 p-4"><!-- fourth member --
+        <!-- <div class="col-lg-3 p-4"><!-- fourth member You have to change the col-lg-4 to col-lg-3 on the above members!--
           <img src="images/file.jpg" alt="Nature" class="memberPic">
           <br>
           <h2 class="fw-normal"><br />President</h2>
@@ -395,13 +398,13 @@
             <div>
               <ul class="footer_nav">
                 <li class="footer__item">
-                  <a href="#home" class="footer__links" id="home-page"><b>About</b></a>
+                  <a href="index.html" class="footer__links" id="home-page"><b>About</b></a>
                 </li>
                 <li class="footer__item">
                   <a href="blog.html" class="footer__links" id="home-page"><b>Blog</b></a>
                 </li>
                 <li class="footer__item">
-                  <a href="blog.html" class="footer__links" id="home-page"><b>Contact</b></a>
+                  <a href="#home" class="footer__links" id="home-page"><b>Contact</b></a>
                 </li>
               </ul>
             </div>
@@ -429,12 +432,11 @@
   </footer>
 
   <!-- BootStrap JS -->
-  <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
   <!-- Personal JS -->
-  <script src="practice.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>

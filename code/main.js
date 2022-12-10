@@ -41,23 +41,6 @@ const msg = document.getElementById('msg')
             .catch(error => console.error('Error!', error.message))
           })
          
-/* Blog Search ------------------------------------------------------------------- */
-          function myFunction() {
-            var input, filter, cards, cardContainer, title, i;
-            input = document.getElementById("myFilter");
-            filter = input.value.toUpperCase();
-            cardContainer = document.getElementById("myProducts");
-            cards = cardContainer.getElementsByClassName("card");
-            for (i = 0; i < cards.length; i++) {
-              title = cards[i].querySelector(".card-title");
-              if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-                cards[i].style.display = "";
-              } else {
-                cards[i].style.display = "none";
-              }
-            }
-          }
-
 /* Home Typing Text ------------------------------------------------------------------- */
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
@@ -102,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
 });
 
 
-// --------------------
+/* Blog Type Sort ------------------------------------------------------------------- */
 function myFunction() {
   var input, filter, cards, cardContainer, h5, title, i;
   input = document.getElementById("myFilter");
@@ -119,25 +102,26 @@ function myFunction() {
   }
 }
 
-// -------------------------
+/* Blog Theme Button Sort ------------------------------------------------------------------- */
+// function sortTheme('filter'){
+//   var filter = (filter) => {
+//     const cards = document.getElementsByClassName("post");
+//     for (let i = 0; i < cards.length; i++) {
+//         let title = cards[i].querySelector(".post .theme");
+//         if (title.innerText.indexOf(filter) > -1) {
+//             cards[i].classList.remove("d-none")
+//         } else {
+//             cards[i].classList.add("d-none")
+//         }
+//     }
+//   }
+// }
 
-
-// --------------------------
-var filter = (filter) => {
-  const cards = document.getElementsByClassName("col-sm-12");
-  for (let i = 0; i < cards.length; i++) {
-      let title = cards[i].querySelector(".card .card-body .card-title");
-      if (title.innerText.indexOf(filter) > -1) {
-          cards[i].classList.remove("d-none")
-      } else {
-          cards[i].classList.add("d-none")
-      }
-  }
-}
-
-var clearAll = () => {
-  cards = document.getElementsByClassName("col-sm-12")
-  for (i = 0; i < cards.length; i++) {
-      cards[i].classList.remove("d-none")
-  }
-}
+// function reset(a){
+//    var clearAll = () => {
+//     cards = document.getElementsByClassName("post")
+//     for (i = 0; i < cards.length; i++) {
+//         cards[i].classList.remove("d-none")
+//     }
+//   }
+// }
