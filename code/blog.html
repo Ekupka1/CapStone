@@ -69,8 +69,16 @@
         background-color: var(--clr-nav);
       }
 
+      #weekly:hover, #monthly:hover{
+        box-shadow: 0 0 0.5em var(--clr-neon), 0 0 0.5em var(--clr-neon);
+        transform: scale(1.03);
+        transition: transform .2s;
+      }
+
       #news {
         color: var(--clr-tdf);
+        font-size: 1.25rem;
+        align-content: center;
       }
     </style>
     <div class="p-2 p-md-5 mb-4 rounded">
@@ -80,21 +88,21 @@
           <!-- <hr class="top_divider" /> -->
           <br />
           <div class="row align-items-md-stretch">
-            <div class="col-md-6 p-3">
+            <div class="news col-md-6 p-3">
               <div class="h-100 p-5 rounded-3" id="weekly">
                 <h2 class="meet_h2">Monthly</h2>
                 <br />
-                <p><span id="news">We'll be having a return meeting the tuesday of Block 5 3:30PM-4:30PM!</span></p>
+                <p><span id="news">We'll be having a return meeting the tuesday of Block 5 3:30PM-4:30PM</span></p>
                 <br />
                 <!-- <a class="btn btn-lg" href="contact.html">Get in the loop</a> -->
               </div>
             </div>
             <br />
-            <div class="col-md-6 p-3">
+            <div class="news col-md-6 p-3">
               <div class="h-100 p-5 rounded-3" id="monthly">
                 <h2 class="meet_h2">Semester</h2>
                 <br />
-                <p><span id="news">We plan to host a exciting event with zumba like robots and a hackathon!</span></p>
+                <p><span id="news">We plan to host a exciting event with zumba like robots and a hackathon</span></p>
                 <br />
                 <!-- <a class="btn btn-lg" href="contact.html">Get in the loop</a> -->
               </div>
@@ -196,6 +204,11 @@
       .button_theme {
         justify-content: space-evenly;
         display: flex;
+      }
+
+      .post:hover{
+        transform: scale(1.02);
+        transition: transform .2s;
       }
 
       #btn_theme {
