@@ -54,78 +54,119 @@
   <section class="post" id="home">
     <!-- about section // style in html about section-->
     <style>
-    .post{
-        background-color: #202020;
-        padding: 2rem;}
-      
-      .crumb{
-        margin: 0 0  4rem 2rem;
-        overflow-x: hidden !important;
-      }
+        .post {
+            background-color: #202020;
+            padding: 2rem;
+        }
 
-      .about {
-        background: #202020 !important;
-        padding: 5rem 0 8rem 0;
-      }
+        #title {
+            margin-top: 1rem;
+        }
 
-      .lead span {
-        color: #fff ;
-      }
+        .crumb {
+            margin: 0 0 4rem 2rem;
+            overflow-x: hidden !important;
+        }
 
-      .responsive {
-        height: 30rem;
-        width: 100%;
-        border-radius: 1.5rem;
-        padding: 1rem;
-        object-fit: cover;
-      }
+        .about {
+            background: #202020 !important;
+            padding: 5rem 0 8rem 0;
+        }
 
-     .past{
-        color: #fff;
-      }
+        .lead span {
+            color: #fff;
+        }
+
+        .responsive {
+            height: 30rem;
+            width: 100%;
+            border-radius: 1.5rem;
+            padding: 1rem;
+            object-fit: cover;
+        }
+
+        .responsives {
+            height: 20rem;
+            width: 100%;
+            border-radius: 1.5rem;
+            padding: 1rem;
+            object-fit: cover;
+        }
+
+        .past {
+            color: #fff;
+        }
     </style>
     <div class="crumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item" id="past"><a class="past" href="../blog.html">Blog</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Post</li>
-          </ol>
+            <li class="breadcrumb-item" id="past"><a class="past" href="../blog.html"><H6>All Posts</H6></a></li>
+            <li class="breadcrumb-item active" aria-current="page">Clicked Post</li>
+        </ol>
     </div>
     <div class="container marketing">
-      <div class="row featurette">
-        <div class="col-md-5">
-          <img src="../images/csHero.jpg" alt="Nature" class="responsive">
+        <div class="row featurette">
+            <div class="col-md-5">
+                <img src="postImages/bootstrap.png" alt="Nature" class="responsive">
+            </div>
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1" id="title">
+                    Title
+                    <span class="text-muted"><br />By: Name</span>
+                </h2>
+                <br />
+                <p class="lead">
+                    <span>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                  deserunt mollit anim id est laborum.</p>
+                <br />
+            </div>
         </div>
-        <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">
-              Who are we?
-              <span class="text-muted"><br />A Computer Science Club</span>
-            </h2>
-            <br />
-            <p class="lead">
-              We are the Cornell College computer science club. <span> We strive to hone our skills and create </span>a
-              strong friendly
-              environment. We host fun events like a annual hackathon, server tour, and movie nights! We want to build a
-              community to
-             
-            </p>
-            <br />
-          </div>
-      </div>
+        <br />
+        <p class="lead">
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                  deserunt mollit anim id est laborum.</p>
+        <br />
     </div>
-  </section>
 
-  <!-- <section class="WIP">
-      <style>
-        .img {
-          right:50rem;
-        }
-      </style>
-      <div id="circle-shape-example">
-        <img src="images/csHero.jpg" alt="something cool" class="curve"><h1>KiwiFruit</h1>
-      
-        <p>This is kiwifruit: originally called “yang tao”, “melonette” or Chinese gooseberry. Cultivated in its fuzzy variety from Chinese imports, the fruit proved popular with American military servicemen stationed in New Zealand during World War II, with commercial export to the United States starting after the end of the war. In California, the fruit was rebranded as “kiwifruit” due to its resemblance to New Zealand’s national bird. However, it is not a “kiwi”, which is also the demonym for native New Zealanders. Saying “I’m going to eat a kiwi” implies that you are either a cannibal or planning to dine on an endangered flightless bird.
-      </div>
-    </section> -->
+    <br>
+    <div class="container marketing">
+        <div class="row featurette">
+            <div class="col-md-8">
+                <p class="lead">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                  deserunt mollit anim id est laborum.
+                </p>
+                <br />
+            </div>
+            <div class="col-md-4">
+                <img src="postImages/bootstrap.png" alt="Nature" class="responsives">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="WIP">
+  <style>
+    .img {
+      right:50rem;
+    }
+  </style>
+  <div id="circle-shape-example">
+    <img src="images/csHero.jpg" alt="something cool" class="curve"><h1>KiwiFruit</h1>
+  
+    <p>This is kiwifruit: originally called “yang tao”, “melonette” or Chinese gooseberry. Cultivated in its fuzzy variety from Chinese imports, the fruit proved popular with American military servicemen stationed in New Zealand during World War II, with commercial export to the United States starting after the end of the war. In California, the fruit was rebranded as “kiwifruit” due to its resemblance to New Zealand’s national bird. However, it is not a “kiwi”, which is also the demonym for native New Zealanders. Saying “I’m going to eat a kiwi” implies that you are either a cannibal or planning to dine on an endangered flightless bird.
+  </div>
+</section> -->
 
   <footer>
     <!-- footer section // no style guide in html -->
