@@ -72,8 +72,14 @@
                 padding: 5rem 0 8rem 0;
             }
 
-            .lead span {
+            .main span {
+                color: rgb(212, 170, 254);
+            }
+
+            .main {
                 color: #fff;
+                font-size: 1.20rem;
+                font-weight: 150;
             }
 
             .responsive {
@@ -95,6 +101,11 @@
             .past {
                 color: #fff;
             }
+
+            #big:hover, #smaller:hover{
+                transform: scale(1.02);
+                transition: transform .2s;
+              }
         </style>
         <div class="crumb">
             <ol class="breadcrumb">
@@ -105,7 +116,7 @@
         <div class="container marketing">
             <div class="row featurette">
                 <div class="col-md-5">
-                    <img src="postImages/bootstrap.png" alt="Nature" class="responsive">
+                    <img src="postImages/bootstrap.png" alt="Nature" class="responsive" id="big">
                 </div>
                 <div class="col-md-7">
                     <h2 class="featurette-heading fw-normal lh-1" id="title">
@@ -113,31 +124,23 @@
                         <span class="text-muted"><br />By: Ethan Kupka</span>
                     </h2>
                     <br />
-                    <p class="lead">
-                        <span>
+                    <p class="main">
                             Throughout my time in the 2022 year though blocks 1-4, I developed a website for the Cornell
-                            College computer science club C4.
-                            I completed this by using Html, CSS, Sass, JS, and Bootstrap. I coded the website using
-                            Visual Studio as well. I learned about
-                            new topics such as frameworks and databases. Also diving into new styling languages and
-                            developing my knowledge in previous projects.
+                            College computer science club C4. I completed this by using Html, CSS, Sass, JS, and Bootstrap. 
+                            I coded the website using Visual Studio as well. I learned about new topics such as frameworks 
+                            and databases. Also diving into new styling languages and developing my knowledge in previous projects.
                             My main goals for the website were design, community building, and easy transfer/use between
-                            C4 members. </span>
+                            C4 members.
                     </p>
                     <br />
                 </div>
             </div>
             <br />
-            <p class="lead">
-                <span>
-                    Throughout my time in the 2022 year though blocks 1-4, I developed a website for the Cornell
-                    College computer science club C4.
-                    I completed this by using Html, CSS, Sass, JS, and Bootstrap. I coded the website using
-                    Visual Studio as well. I learned about
-                    new topics such as frameworks and databases. Also diving into new styling languages and
-                    developing my knowledge in previous projects.
-                    My main goals for the website were design, community building, and easy transfer/use between
-                    C4 members. </span>
+            <p class="main">
+                    I have given the C4 website a slick design improving the brand of the C4 club. I achieved this by learning 
+                    Sass and using the framework Bootstrap. I had spent the longest amount of time focusing on the design 
+                    of the website, going back and forth on what I wanted. I had run into a bunch of problems with 
+                    styling the website. Most of the problems lead to the use of Bootstrap and then minor Html syntax.
             </p>
             <br />
         </div>
@@ -146,28 +149,46 @@
         <div class="container marketing">
             <div class="row featurette">
                 <div class="col-md-8">
-                    <p class="lead">
-                        We are the Cornell College computer science club. <span> We strive to hone our skills and create
-                        </span>a strong friendly
-                        environment. We host fun events like a annual hackathon, server tour, and movie nights! We want
-                        to build a community to
-                        hance our computer science skills where you can present your latest project and get healthy feed
-                        back!
-                        Throughout my time in the 2022 year though blocks 1-4, I developed a website for the Cornell
-                        College computer science club C4.
-                        I completed this by using Html, CSS, Sass, JS, and Bootstrap. I coded the website using
-                        Visual Studio as well. I learned about
-                        new topics such as frameworks and databases. Also diving into new styling languages and
-                        developing my knowledge in previous projects.
-                        My main goals for the website were design, community building, and easy transfer/use between
-                        C4 members.
+                    <p class="main">
+                        For styling, I used Bootstrap. Bootstrap is a simple framework for 
+                        websites focusing on designs rather than JS functions and the backend, unlike React, Astro, and Vue. I initially 
+                        thought it would increase my time to finish the website, but without having any experience, it had taken me about 
+                        the same amount of time as hard styling the website. Bootstrap used a style language called Sass and it was 
+                        the biggest hurdle to learn. With beginner styling skills and knowledge I greater intent to focus
+                        on better understanding flexbox and grid of web development. This but this was delayed when I had to learn 
+                        Sass. <span>Sass is basically an ramped-up version of CSS adding more options to the code, making the styling 
+                        process quicker in the future.</span> Getting Started with Sass is pretty easy. You would go to their website and copy their 
+                        command line code for installation and paste it into your terminal. Then you would make a <code>'.scss'</code> file. But to link this 
+                        to a website can complicated. The file can't be linked to the Html like a CSS or a js file,  
+                        an extension has to be downloaded to watch the <code>'.scss'</code> file on VScode and map it to a CSS file where it can be linked to
+                        the Html page.
                     </p>
                     <br />
                 </div>
                 <div class="col-md-4">
-                    <img src="postImages/sass.jpg" alt="Nature" class="responsives">
+                    <img src="postImages/sass.jpg" alt="Nature" class="responsives" id="smaller">
                 </div>
             </div>
+            <br />
+            <p class="main">
+                    After reading about and using Bootstrap it does make the styling portion a lot simpler and quicker but it does require practice, especially
+                     if you are trying to change previous Sass files. It was difficult for me to change the files because there were three options one could take.<span> 
+                     The first and easiest option was making your own style sheet and overwriting Bootstraps Sass files by linking it after it in the Html file. 
+                    </span> This is not advised due to the fact it is efficient and can get confusing after a certain point.<span> The second was rewriting Bootstraps files, 
+                     but this wasn't advised because if something were to go wrong then there would be no safety net for style. And the third option was to make 
+                     your own Sass files and link Bootstraps Sass files to them, then create paths to certain sections of the files, rewrite the code then push it 
+                     to the CSS page linked to the Html.</span> I tried to do option three but soon found out it was trickier than I thought. I found trying to understand 
+                     the process would have doubled my time to make the easiest changes. So I weighed the pros and cons and chose the first option, to overwrite the 
+                     Sass files through my own style sheets.
+            </p>
+            <br />
+            <br />
+            <p class="main">
+                    The biggest help from Bootstrap was the response factor of the website. It had provided great foundations for resizing the sections, 
+                    so I only had to make minor tweaks. Even though I have had a rough start with Bootstrap, I know for my next project it would go by way smoother 
+                    and quicker.
+            </p>
+            <br />
         </div>
     </section>
 

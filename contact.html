@@ -58,7 +58,7 @@
         padding: 3rem 0 3rem 0;
       }
 
-      #sug_h2{
+      #sug_h2 {
         color: #ffffff;
         font-size: 2.25rem;
       }
@@ -76,38 +76,42 @@
         color: #ffffff;
       }
 
-      .form{
+      .forms {
         display: flex;
         flex-direction: column;
       }
 
-      .form input{
+      .forms input {
         margin: 0;
       }
     </style>
     <div class="container marketing">
       <div class="col-md-9" id="sug_card">
         <div class="h-50 p-5 rounded-3">
-            <h2 id="sug_h2">Have Any <span>Suggestions?</span></h2>
+          <h2 id="sug_h2">Have Any <span>Suggestions?</span></h2>
+          <br />
+          <form class="forms" name="google-sheet-suggestion">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label fs-5">Name</label>
+              <input type="name" name="Name" class="form-control" id="exampleFormControlInput1" placeholder="name"
+                required />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label fs-5">Email address</label>
+              <input type="email" name="Email" class="form-control" id="exampleFormControlInput1"
+                placeholder="name@example.com" required />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label fs-5">Suggestion</label>
+              <textarea class="form-control" name="Suggestion" id="exampleFormControlTextarea1"
+                placeholder="I think we should..., I would like to see..., Can we code..." rows="3" required></textarea>
+            </div>
             <br />
-            <form class="form" name="google-sheet-suggestion">
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label fs-5">Name</label>
-                <input type="name" name="Name" class="form-control" id="exampleFormControlInput1" placeholder="name" required/>
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label fs-5">Email address</label>
-                <input type="email" name="Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required/>
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label fs-5">Suggestion</label>
-                <textarea class="form-control" name="Suggestion" id="exampleFormControlTextarea1" placeholder="I think we should..., I would like to see..., Can we code..." rows="3" required></textarea>
-              </div>
-              <br />
-              <button class="btn fs-5" type="submit"><span>Submit</span></button>
-            </form>
-          </div>
+            <button class="btn fs-5" type="submit"><span>Submit</span></button>
+          </form>
+          <span id="sug"></span>
         </div>
+      </div>
     </div>
   </section>
 
@@ -210,6 +214,7 @@
       #discord_btn:hover {
         background-color: #928dab;
       }
+
       /* Responsive columns - one column layout (vertical) on small screens */
       @media screen and (max-width: 600px) {
         .columns {
@@ -257,13 +262,14 @@
         resize: 10rem;
         top: 30rem;
         height: auto;
+       
       }
 
-      #memberBtn{
+      #memberBtn {
         background-color: #928dab;
       }
 
-      #memberBtn:hover{
+      #memberBtn:hover {
         background-color: #a861ff;
       }
 
@@ -274,13 +280,27 @@
         font-size: 1.05rem;
       }
 
-      .fw-normal{
-        color:#ffffff
+      .fw-normal {
+        color: #ffffff
       }
 
-      .col-lg-3{
+      .col-lg-3 {
         text-align: center;
-      } /* For 4 members | col-lg-4 for 3 members */
+      }
+
+      /* For 4 members | col-lg-4 for 3 members */
+      /* Responsive columns - one column layout (vertical) on small screens */
+      @media screen and (max-width: 1200px) {
+        .memberPic {
+          width: 12rem;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        .memberPic {
+          width: 16rem;
+        }
+      }
     </style>
     <div class="container marketing">
       <!-- Three columns of text below the carousel -->
@@ -289,7 +309,8 @@
           <img src="images/file.jpg" alt="Nature" class="memberPic">
           <br>
           <h2 class="fw-normal"><br />President</h2>
-          <p class="description">Handles events and overlooks the club, setting up meetings, and addressing any problems</p>
+          <p class="description">Handles events and overlooks the club, setting up meetings, and addressing any problems
+          </p>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -301,11 +322,11 @@
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <p><br/>
-              Name: <code>Ethan Kupka</code><br />
-              Year: <code>Class of 2023</code><br />
-              Email: <code>ekupka23@cornellcollege.edu</code><br />
-              Fun Fact: <code>Likes to play lacrosse</code></p>
+              <p><br />
+                Name: <code>Ethan Kupka</code><br />
+                Year: <code>Class of 2023</code><br />
+                Email: <code>ekupka23@cornellcollege.edu</code><br />
+                Fun Fact: <code>Likes to play lacrosse</code></p>
             </div>
           </div>
         </div>
@@ -324,7 +345,7 @@
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <p><br/>
+              <p><br />
                 Name: <code>First Last</code><br />
                 Year: <code>Class of 20##</code><br />
                 Email: <code>name@cornellcollege.edu</code><br />
@@ -347,7 +368,7 @@
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <p><br/>
+              <p><br />
                 Name: <code>Mac Coleman</code><br />
                 Year: <code>Class of 2024</code><br />
                 Email: <code>mcoleman24@cornellcollege.edu</code><br />
@@ -355,11 +376,13 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 p-4"><!-- fourth member You have to change the col-lg-4 to col-lg-3 on the above members!-->
+        <div class="col-lg-3 p-4">
+          <!-- fourth member You have to change the col-lg-4 to col-lg-3 on the above members!-->
           <img src="images/memPic.jpg" alt="Nature" class="memberPic">
           <br>
           <h2 class="fw-normal"><br />Secretary</h2>
-          <p class="description">Handles spreading the word of current events, posting on socials, and writes the meeting notes</p>
+          <p class="description">Handles spreading the word of current events, posting on socials, and writes the
+            meeting notes</p>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
@@ -371,11 +394,11 @@
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <p><br/>
-              Name: <code>Matt Norwood</code><br />
-              Year: <code>Class of 2025</code><br />
-              Email: <code>mnorwood25@cornellcollege.edu</code><br />
-              Fun Fact: <code>Likes to work on his personal video game</code></p>
+              <p><br />
+                Name: <code>Matt Norwood</code><br />
+                Year: <code>Class of 2025</code><br />
+                Email: <code>mnorwood25@cornellcollege.edu</code><br />
+                Fun Fact: <code>Likes to work on his personal video game</code></p>
             </div>
           </div>
         </div>
@@ -415,8 +438,8 @@
             <div>
               <form name="google-sheet-email">
                 <div class="input-group">
-                  <input type="email" name= "Email" class="form-control" placeholder="Enter Cornell College Email" required
-                    aria-label="Enter Cornell College Email" aria-describedby="button-addon2" />
+                  <input type="email" name="Email" class="form-control" placeholder="Enter Cornell College Email"
+                    required aria-label="Enter Cornell College Email" aria-describedby="button-addon2" />
                   <button class="button1" type="submit"><span>Join</span></button>
                 </div>
               </form>
@@ -434,6 +457,27 @@
     crossorigin="anonymous"></script>
   <!-- Personal JS -->
   <script src="main.js"></script>
+  <!-- Suggestion JS -->
+  <script>
+    const sugURL = 'https://script.google.com/macros/s/AKfycbzwI3oWenyHRsosnPcwaoQvCtukKFzTvt9Uwp9ktI_depmLzWmCumBW2NM2d8Mt2bgMfg/exec'
+    const forms = document.forms['google-sheet-suggestion']
+    const sug = document.getElementById('sug')
+
+    forms.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(sugURL, { method: 'POST', body: new FormData(forms) })
+        .then(response => {
+          console.log('Success!', response)
+          msg.innerHTML = "Thank you for sub"
+          setTimeout(function () {
+            msg.innerHTML = ""
+          },
+            5000)
+          forms.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 
 </html>
